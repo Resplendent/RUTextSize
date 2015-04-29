@@ -10,18 +10,18 @@
 Pod::Spec.new do |s|
   s.name             = "RUTextSize"
   s.version          = "0.1.0"
-  s.summary          = "A short description of RUTextSize."
-  s.description      = <<-DESC
-                       An optional longer description of RUTextSize
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/RUTextSize"
+  s.summary          = "Helpers for getting size of common UI components."
+  # s.description      = <<-DESC
+  #                      An optional longer description of RUTextSize
+  #
+  #                      * Markdown format.
+  #                      * Don't worry about the indent, we strip it!
+  #                      DESC
+  s.homepage         = "https://github.com/Resplendent/RUTextSize"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Lee Pollard" => "tjdet11@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/RUTextSize.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Resplendent/RUTextSize.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'

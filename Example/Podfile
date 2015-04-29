@@ -1,11 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+def import_pods
+	pod "RUTextSize", :path => "../"
+end
+
 target 'RUTextSize', :exclusive => true do
-  pod "RUTextSize", :path => "../"
+	import_pods
 end
 
 target 'Tests', :exclusive => true do
-  pod "RUTextSize", :path => "../"
+	import_pods
 
   pod 'Specta'
   pod 'Expecta'
