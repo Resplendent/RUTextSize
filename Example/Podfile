@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'RUTextSize', :exclusive => true do
+  pod "RUTextSize", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "RUTextSize", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
