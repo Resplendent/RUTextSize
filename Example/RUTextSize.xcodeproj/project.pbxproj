@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B189A55CCF875F329F7D1FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0810B40DB6C87E459C6CA33E /* libPods.a */; };
 		40CDA24599C28A02F58CB4B6 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCB2A75B0B0A79EB813A244 /* libPods-Tests.a */; };
 		5ECC89A6A9C8A8058406FF17 /* libPods-RUTextSize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0810B40DB6C87E459C6CA33E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RUTextSize.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33429B3653BEDA5FA0247C7B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3EF39BA31DECC9E2FFB7E31D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				5ECC89A6A9C8A8058406FF17 /* libPods-RUTextSize.a in Frameworks */,
+				3B189A55CCF875F329F7D1FE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +139,7 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */,
 				FCCB2A75B0B0A79EB813A244 /* libPods-Tests.a */,
+				0810B40DB6C87E459C6CA33E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
