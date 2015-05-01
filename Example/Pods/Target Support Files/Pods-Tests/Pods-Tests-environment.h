@@ -28,7 +28,7 @@
 #define COCOAPODS_POD_AVAILABLE_RUTextSize
 #define COCOAPODS_VERSION_MAJOR_RUTextSize 0
 #define COCOAPODS_VERSION_MINOR_RUTextSize 1
-#define COCOAPODS_VERSION_PATCH_RUTextSize 0
+#define COCOAPODS_VERSION_PATCH_RUTextSize 1
 
 // ResplendentUtilities
 #define COCOAPODS_POD_AVAILABLE_ResplendentUtilities

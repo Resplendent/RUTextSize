@@ -5,7 +5,7 @@ PODS:
     - FBSnapshotTestCase (= 1.6)
   - FBSnapshotTestCase (1.6)
   - ResplendentUtilities (0.2)
-  - RUTextSize (0.1.0):
+  - RUTextSize (0.1.1):
     - ResplendentUtilities (= 0.2)
   - Specta (0.5.0)
 
@@ -26,7 +26,7 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
   ResplendentUtilities: 8ff604301bd4d8aa218eeb5a4b37537c700a751d
-  RUTextSize: 90ba847125eb159f80982399ef7fd628c24c0b8c
+  RUTextSize: 0be6b6019a97cbfe4bc02e6181e8f1cf23a3fb5f
   Specta: eb90708ed77569bbda089f8ead10bb99b8e9489e
 
 COCOAPODS: 0.36.4
