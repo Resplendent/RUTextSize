@@ -28,13 +28,13 @@
 #define COCOAPODS_POD_AVAILABLE_RUTextSize
 #define COCOAPODS_VERSION_MAJOR_RUTextSize 0
 #define COCOAPODS_VERSION_MINOR_RUTextSize 1
-#define COCOAPODS_VERSION_PATCH_RUTextSize 1
+#define COCOAPODS_VERSION_PATCH_RUTextSize 2
 
 // ResplendentUtilities
 #define COCOAPODS_POD_AVAILABLE_ResplendentUtilities
 #define COCOAPODS_VERSION_MAJOR_ResplendentUtilities 0
 #define COCOAPODS_VERSION_MINOR_ResplendentUtilities 2
-#define COCOAPODS_VERSION_PATCH_ResplendentUtilities 0
+#define COCOAPODS_VERSION_PATCH_ResplendentUtilities 1
 
 // Specta
 #define COCOAPODS_POD_AVAILABLE_Specta
