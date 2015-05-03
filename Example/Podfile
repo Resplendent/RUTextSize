@@ -3,8 +3,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 def import_pods
 	pod "RUTextSize", :path => "../"
-
-	pod 'ResplendentUtilities', '0.2'
 end
 
 
