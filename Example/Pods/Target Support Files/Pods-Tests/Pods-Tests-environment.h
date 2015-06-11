@@ -16,7 +16,7 @@
 #define COCOAPODS_POD_AVAILABLE_Expecta_Snapshots
 #define COCOAPODS_VERSION_MAJOR_Expecta_Snapshots 1
 #define COCOAPODS_VERSION_MINOR_Expecta_Snapshots 3
-#define COCOAPODS_VERSION_PATCH_Expecta_Snapshots 2
+#define COCOAPODS_VERSION_PATCH_Expecta_Snapshots 3
 
 // FBSnapshotTestCase
 #define COCOAPODS_POD_AVAILABLE_FBSnapshotTestCase
@@ -34,11 +34,11 @@
 #define COCOAPODS_POD_AVAILABLE_ResplendentUtilities
 #define COCOAPODS_VERSION_MAJOR_ResplendentUtilities 0
 #define COCOAPODS_VERSION_MINOR_ResplendentUtilities 2
-#define COCOAPODS_VERSION_PATCH_ResplendentUtilities 1
+#define COCOAPODS_VERSION_PATCH_ResplendentUtilities 7
 
 // Specta
 #define COCOAPODS_POD_AVAILABLE_Specta
-#define COCOAPODS_VERSION_MAJOR_Specta 0
-#define COCOAPODS_VERSION_MINOR_Specta 5
-#define COCOAPODS_VERSION_PATCH_Specta 0
+#define COCOAPODS_VERSION_MAJOR_Specta 1
+#define COCOAPODS_VERSION_MINOR_Specta 0
+#define COCOAPODS_VERSION_PATCH_Specta 2
 
