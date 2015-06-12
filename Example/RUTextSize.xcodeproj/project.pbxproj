@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		3B189A55CCF875F329F7D1FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0810B40DB6C87E459C6CA33E /* libPods.a */; };
 		40CDA24599C28A02F58CB4B6 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCB2A75B0B0A79EB813A244 /* libPods-Tests.a */; };
+		4335F32A1B2A46E80002344A /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F3261B2A46E80002344A /* RUAppDelegate.m */; };
+		4335F3301B2A49380002344A /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F32F1B2A49380002344A /* RUViewController.m */; };
+		4335F3331B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F3321B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m */; };
+		4335F3371B2A4E490002344A /* UIView+RUCommonSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F3361B2A4E490002344A /* UIView+RUCommonSizes.m */; };
 		5ECC89A6A9C8A8058406FF17 /* libPods-RUTextSize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* RUAppDelegate.m */; };
-		6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F59F195388D20070C39A /* Main_iPhone.storyboard */; };
-		6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A2195388D20070C39A /* Main_iPad.storyboard */; };
-		6003F5A7195388D20070C39A /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* RUViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -42,6 +42,14 @@
 		1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RUTextSize.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33429B3653BEDA5FA0247C7B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3EF39BA31DECC9E2FFB7E31D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4335F3251B2A46E80002344A /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
+		4335F3261B2A46E80002344A /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
+		4335F32E1B2A49380002344A /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
+		4335F32F1B2A49380002344A /* RUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
+		4335F3311B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUTableViewCell_RUTextViewWithPlaceholderContainerView.h; sourceTree = "<group>"; };
+		4335F3321B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUTableViewCell_RUTextViewWithPlaceholderContainerView.m; sourceTree = "<group>"; };
+		4335F3351B2A4E490002344A /* UIView+RUCommonSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RUCommonSizes.h"; sourceTree = "<group>"; };
+		4335F3361B2A4E490002344A /* UIView+RUCommonSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RUCommonSizes.m"; sourceTree = "<group>"; };
 		59C58101D920248628BE3B4C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* RUTextSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUTextSize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,12 +59,6 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* RUTextSize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RUTextSize-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* RUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* RUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A0195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		6003F5A3195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* RUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* RUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -100,6 +102,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4335F3241B2A46E80002344A /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				4335F3341B2A4E340002344A /* Category */,
+				4335F3251B2A46E80002344A /* RUAppDelegate.h */,
+				4335F3261B2A46E80002344A /* RUAppDelegate.m */,
+				4335F32C1B2A49380002344A /* UITableViewCell */,
+				4335F32D1B2A49380002344A /* UIViewController */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		4335F32C1B2A49380002344A /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4335F3311B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.h */,
+				4335F3321B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		4335F32D1B2A49380002344A /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4335F32E1B2A49380002344A /* RUViewController.h */,
+				4335F32F1B2A49380002344A /* RUViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		4335F3341B2A4E340002344A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4335F3351B2A4E490002344A /* UIView+RUCommonSizes.h */,
+				4335F3361B2A4E490002344A /* UIView+RUCommonSizes.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		58515451FC5E5E4B30829063 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,12 +192,7 @@
 		6003F593195388D20070C39A /* RUTextSize */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* RUAppDelegate.h */,
-				6003F59D195388D20070C39A /* RUAppDelegate.m */,
-				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
-				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
-				6003F5A5195388D20070C39A /* RUViewController.h */,
-				6003F5A6195388D20070C39A /* RUViewController.m */,
+				4335F3241B2A46E80002344A /* Code */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -284,9 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,9 +403,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* RUAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* RUViewController.m in Sources */,
+				4335F3331B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4335F3301B2A49380002344A /* RUViewController.m in Sources */,
+				4335F32A1B2A46E80002344A /* RUAppDelegate.m in Sources */,
+				4335F3371B2A4E490002344A /* UIView+RUCommonSizes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,22 +436,6 @@
 				6003F597195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6003F59F195388D20070C39A /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5A0195388D20070C39A /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		6003F5A2195388D20070C39A /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5A3195388D20070C39A /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
