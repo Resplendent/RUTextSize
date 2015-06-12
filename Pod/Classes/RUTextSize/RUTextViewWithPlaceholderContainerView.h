@@ -17,6 +17,7 @@
 
 @property (nonatomic, readonly) UITextView* textView;
 @property (nonatomic, readonly) CGRect textViewFrame;
+@property (nonatomic, assign) BOOL centerTextVertically;
 
 @property (nonatomic, readonly) UILabel* textViewPlaceholderLabel;
 @property (nonatomic, readonly) CGRect textViewPlaceholderLabelFrame;
@@ -25,7 +26,8 @@
 
 -(void)updateTextViewPlaceholderLabelVisilibity;
 
-//UITextViewDelegate methods used.
+#pragma mark - UITextViewDelegate
+//- (void)textViewwill
 - (void)textViewDidEndEditing:(UITextView *)theTextView;
 - (void)textViewDidChange:(UITextView *)textView;
 

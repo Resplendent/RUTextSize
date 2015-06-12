@@ -7,13 +7,22 @@
 //
 
 #import "RUAppDelegate.h"
+#import "RUViewController.h"
+
+
+
+
 
 @implementation RUAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	[self.window setBackgroundColor:[UIColor redColor]];
+	[self.window setRootViewController:[RUViewController new]];
+	[self.window makeKeyAndVisible];
+
+	return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

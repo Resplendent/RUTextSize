@@ -10,6 +10,7 @@
 #import "UILabel+RUTextSize.h"
 #import "UIView+RUUtility.h"
 #import "RUConditionalReturn.h"
+#import "UITextView+RUTextSize.h"
 
 
 
@@ -22,6 +23,12 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 
 
 @interface RUTextViewWithPlaceholderContainerView ()
+
+@property (nonatomic, readonly) UITapGestureRecognizer* tapGesture;
+-(void)didTap_tapGesture;
+
+@property (nonatomic, readonly) UIEdgeInsets textViewContentInset;
+
 
 -(void)ru_setRegisteredToTextView:(BOOL)registered;
 
@@ -44,12 +51,15 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 {
 	if (self = [super initWithFrame:frame])
 	{
+		_tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTap_tapGesture)];
+		[self addGestureRecognizer:self.tapGesture];
+		
 		_textView = [UITextView new];
 		[self.textView setDelegate:self];
 		[self addSubview:self.textView];
 
 		_textViewPlaceholderLabel = [UILabel new];
-		[self.textView addSubview:self.textViewPlaceholderLabel];
+		[self addSubview:self.textViewPlaceholderLabel];
 
 		[self ru_setRegisteredToTextView:YES];
 	}
@@ -62,6 +72,8 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 	[super layoutSubviews];
 
 	[self.textView setFrame:self.textViewFrame];
+	[self.textView setContentInset:self.textViewContentInset];
+
 	[self.textViewPlaceholderLabel setFrame:self.textViewPlaceholderLabelFrame];
 }
 
@@ -71,18 +83,41 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 	return self.bounds;
 }
 
+-(UIEdgeInsets)textViewContentInset
+{
+	kRUConditionalReturn_ReturnValue(self.centerTextVertically == false, NO, UIEdgeInsetsZero);
+	
+	CGFloat deadSpace = (CGRectGetHeight(self.textView.bounds) - self.textView.contentSize.height);
+	CGFloat inset = MAX(0, deadSpace / 2.0f);
+	return (UIEdgeInsets){
+		.top		= inset,
+		.left		= self.textView.contentInset.left,
+		.bottom		= inset,
+		.right		= self.textView.contentInset.right,
+	};
+}
+
 -(CGRect)textViewPlaceholderLabelFrame
 {
 	CGSize textSize = [self.textViewPlaceholderLabel ruTextSize];
 
+	CGFloat yCoord = (self.centerTextVertically ?
+					  CGRectGetVerticallyAlignedYCoordForHeightOnHeight(textSize.height, CGRectGetHeight(self.bounds)) :
+					  0.0f);
+
 	return CGRectCeilOrigin((CGRect){
-		.origin.y		= CGRectGetVerticallyAlignedYCoordForHeightOnHeight(textSize.height, CGRectGetHeight(self.bounds)),
+		.origin.y		= yCoord,
 		.size.width		= CGRectGetWidth(self.bounds),
 		.size.height	= textSize.height,
 	});
 }
 
 #pragma mark - UITextViewDelegate
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+	[self updateTextViewPlaceholderLabelVisilibity];
+}
+
 - (void)textViewDidEndEditing:(UITextView *)theTextView
 {
 	[self updateTextViewPlaceholderLabelVisilibity];
@@ -90,15 +125,13 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-	[self updateTextViewPlaceholderLabelVisilibity];
-
 	[self.textDelegate textViewWithPlaceholderContainerView:self textViewDidChangeText:self.textView.text];
 }
 
 #pragma mark - Update Content
 -(void)updateTextViewPlaceholderLabelVisilibity
 {
-	[self.textViewPlaceholderLabel setHidden:(self.textView.text.length > 0)];
+	[self.textViewPlaceholderLabel setHidden:((self.textView.text.length > 0) || self.textView.isFirstResponder)];
 }
 
 #pragma mark - KVO
@@ -111,6 +144,7 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 	dispatch_once(&onceToken, ^{
 		propertiesToObserve = @[
 								@"text",
+								@"contentSize",
 								];
 	});
 	
@@ -137,6 +171,10 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 			{
 				[self updateTextViewPlaceholderLabelVisilibity];
 			}
+			else if ([keyPath isEqualToString:@"contentSize"])
+			{
+				[self setNeedsLayout];
+			}
 			else
 			{
 				NSAssert(false, @"unhandled");
@@ -151,6 +189,22 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 	{
 		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 	}
+}
+
+#pragma mark - textView_centerTextVertically
+-(void)setCenterTextVertically:(BOOL)centerTextVertically
+{
+	kRUConditionalReturn(self.centerTextVertically == centerTextVertically, NO);
+
+	_centerTextVertically = centerTextVertically;
+
+	[self setNeedsLayout];
+}
+
+#pragma mark - Gesture Actions
+-(void)didTap_tapGesture
+{
+	[self.textView becomeFirstResponder];
 }
 
 @end
