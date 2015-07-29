@@ -210,7 +210,7 @@ typedef NS_ENUM(NSInteger, RUViewController_table_sectionType) {
 	if (cell == nil)
 	{
 		cell = [[RUTableViewCell_RUTextViewWithPlaceholderContainerView alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdenifier];
-		[cell.textViewWithPlaceholderContainerView.textViewPlaceholderLabel setText:@"Placeholder text"];
+//		[cell.textViewWithPlaceholderContainerView.textViewPlaceholderLabel setText:@"Placeholder text"];
 	}
 
 	[cell.textViewWithPlaceholderContainerView setCenterTextVertically:verticallyCentered];

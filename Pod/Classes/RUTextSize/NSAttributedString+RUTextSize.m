@@ -18,8 +18,12 @@
 {
 	if ([self respondsToSelector:@selector(boundingRectWithSize:options:context:)])
 	{
-		CGSize boundingSize = (CGSize){.width = boundingWidth,.height = 0};
-		NSStringDrawingOptions options = (NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine);
+		CGSize boundingSize = (CGSize){
+			.width = boundingWidth,
+			.height = CGFLOAT_MAX,
+		};
+		
+		NSStringDrawingOptions options = (NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine);
 		CGRect textBoundingRect = [self boundingRectWithSize:boundingSize options:options context:nil];
 		
 		return (CGSize){
@@ -32,7 +36,7 @@
 		NSAssert(false, @"not supported");
 		return CGSizeZero;
 	}
-
+	
 }
 
 @end

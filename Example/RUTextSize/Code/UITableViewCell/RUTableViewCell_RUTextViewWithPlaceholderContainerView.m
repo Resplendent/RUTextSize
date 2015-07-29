@@ -10,6 +10,8 @@
 #import "RUTextViewWithPlaceholderContainerView.h"
 #import "UIView+RUCommonSizes.h"
 
+#import <UIFont+RUHelvetica.h>
+
 
 
 
@@ -32,10 +34,15 @@
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
 	{
 		_textViewWithPlaceholderContainerView = [RUTextViewWithPlaceholderContainerView new];
-		[self.textViewWithPlaceholderContainerView setClipsToBounds:YES];
-		[self.textViewWithPlaceholderContainerView.layer setBorderWidth:1.0f];
-		[self.textViewWithPlaceholderContainerView.layer setBorderColor:[UIColor grayColor].CGColor];
-		[self.textViewWithPlaceholderContainerView.textView setFont:[UIFont systemFontOfSize:24.0f]];
+		[self.textViewWithPlaceholderContainerView setBackgroundColor:[UIColor clearColor]];
+		[self.textViewWithPlaceholderContainerView.textView setFont:[UIFont ru_helveticaFontWithType:RU_UIFont_Helvetica_type_regular size:14.0f]];
+		[self.textViewWithPlaceholderContainerView.textView setTextColor:[UIColor blackColor]];
+		[self.textViewWithPlaceholderContainerView.textView setTextAlignment:NSTextAlignmentCenter];
+		[self.textViewWithPlaceholderContainerView setCenterTextVertically:YES];
+		[self.textViewWithPlaceholderContainerView.textViewPlaceholderLabel setFont:[UIFont ru_helveticaFontWithType:RU_UIFont_Helvetica_type_regular size:14.0f]];
+		[self.textViewWithPlaceholderContainerView.textViewPlaceholderLabel setTextColor:[UIColor grayColor]];
+		[self.textViewWithPlaceholderContainerView.textViewPlaceholderLabel setTextAlignment:NSTextAlignmentCenter];
+		[self.textViewWithPlaceholderContainerView.textViewPlaceholderLabel setText:@"Placeholder"];
 		[self.contentView addSubview:self.textViewWithPlaceholderContainerView];
 	}
 
