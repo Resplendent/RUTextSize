@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RUTextSize"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "Helpers for getting size of common UI components."
   # s.description      = <<-DESC
   #                      An optional longer description of RUTextSize

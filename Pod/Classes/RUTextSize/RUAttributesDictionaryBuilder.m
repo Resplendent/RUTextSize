@@ -63,6 +63,7 @@
 	if (self.lineSpacing)
 	{
 		[style setLineSpacing:self.lineSpacing.floatValue];
+		[attributesDictionary setObject:self.lineSpacing forKey:NSKernAttributeName];
 	}
 
 	[attributesDictionary setObjectOrRemoveIfNil:style forKey:NSParagraphStyleAttributeName];
