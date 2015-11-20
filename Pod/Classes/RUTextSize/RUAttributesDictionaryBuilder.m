@@ -52,7 +52,13 @@
 	[attributesDictionary setObjectOrRemoveIfNil:self.font forKey:NSFontAttributeName];
 
 	[attributesDictionary setObjectOrRemoveIfNil:self.textColor forKey:
-	 ((self.textColorShouldUseCoreTextKey && (&kCTForegroundColorAttributeName)) ?
+	 (
+	  (self.textColorShouldUseCoreTextKey &&
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpointer-bool-conversion"
+	   (&kCTForegroundColorAttributeName)
+#pragma clang diagnostic pop
+	   ) ?
 	  (NSString *)kCTForegroundColorAttributeName :
 	  NSForegroundColorAttributeName)];
 
