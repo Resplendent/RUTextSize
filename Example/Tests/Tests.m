@@ -2,9 +2,11 @@
 //  RUTextSizeTests.m
 //  RUTextSizeTests
 //
-//  Created by Lee Pollard on 04/28/2015.
-//  Copyright (c) 2014 Lee Pollard. All rights reserved.
+//  Created by Benjamin Maer on 11/20/2015.
+//  Copyright (c) 2015 Benjamin Maer. All rights reserved.
 //
+
+// https://github.com/Specta/Specta
 
 SpecBegin(InitialSpecs)
 
@@ -35,7 +37,7 @@ describe(@"these will pass", ^{
         expect(@"team").toNot.contain(@"I");
     });
     
-    it(@"will wait and succeed", ^AsyncBlock {
+    it(@"will wait and succeed", ^{
         waitUntil(^(DoneCallback done) {
             done();
         });
@@ -43,3 +45,4 @@ describe(@"these will pass", ^{
 });
 
 SpecEnd
+

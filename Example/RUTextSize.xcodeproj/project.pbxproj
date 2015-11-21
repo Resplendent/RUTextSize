@@ -7,24 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B189A55CCF875F329F7D1FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0810B40DB6C87E459C6CA33E /* libPods.a */; };
-		40CDA24599C28A02F58CB4B6 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCB2A75B0B0A79EB813A244 /* libPods-Tests.a */; };
-		4335F32A1B2A46E80002344A /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F3261B2A46E80002344A /* RUAppDelegate.m */; };
-		4335F3301B2A49380002344A /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F32F1B2A49380002344A /* RUViewController.m */; };
-		4335F3331B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F3321B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m */; };
-		4335F3371B2A4E490002344A /* UIView+RUCommonSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4335F3361B2A4E490002344A /* UIView+RUCommonSizes.m */; };
-		5ECC89A6A9C8A8058406FF17 /* libPods-RUTextSize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* RUAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* RUViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		DD43900127EE6ED7D7AAF701 /* Pods_RUTextSize_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */; };
+		FBA28C6BE1EAC3A87CAFD4B1 /* Pods_RUTextSize_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,20 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0810B40DB6C87E459C6CA33E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RUTextSize.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		33429B3653BEDA5FA0247C7B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		3EF39BA31DECC9E2FFB7E31D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4335F3251B2A46E80002344A /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
-		4335F3261B2A46E80002344A /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
-		4335F32E1B2A49380002344A /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
-		4335F32F1B2A49380002344A /* RUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
-		4335F3311B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUTableViewCell_RUTextViewWithPlaceholderContainerView.h; sourceTree = "<group>"; };
-		4335F3321B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUTableViewCell_RUTextViewWithPlaceholderContainerView.m; sourceTree = "<group>"; };
-		4335F3351B2A4E490002344A /* UIView+RUCommonSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RUCommonSizes.h"; sourceTree = "<group>"; };
-		4335F3361B2A4E490002344A /* UIView+RUCommonSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RUCommonSizes.m"; sourceTree = "<group>"; };
-		59C58101D920248628BE3B4C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* RUTextSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUTextSize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0359164FA691DE1A5E1A845C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		157F17378ED151648C78379F /* Pods-RUTextSize_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		544E7D3949A83CE85A7E3E97 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* RUTextSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = RUTextSize.app; path = RUTextSize_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -59,20 +47,24 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* RUTextSize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RUTextSize-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* RUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* RUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* RUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* RUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = RUTextSize_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6D9538CA0B3659DABC4560B1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		7E94053311F70EDFB774F4C5 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8741039D299563FFB94C05A0 /* RUTextSize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RUTextSize.podspec; path = ../RUTextSize.podspec; sourceTree = "<group>"; };
-		CDA9F6BBFE5C5FCBBC275567 /* Pods-RUTextSize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize/Pods-RUTextSize.release.xcconfig"; sourceTree = "<group>"; };
-		E75675B7E57762C96D0ACD60 /* Pods-RUTextSize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize/Pods-RUTextSize.debug.xcconfig"; sourceTree = "<group>"; };
-		FBBA6E75A8D2FFBBF8DF142B /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FCCB2A75B0B0A79EB813A244 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAD8BE8E80A09344DE754CF /* RUTextSize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RUTextSize.podspec; path = ../RUTextSize.podspec; sourceTree = "<group>"; };
+		F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE9A67F508748503B3D1A14A /* Pods-RUTextSize_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				5ECC89A6A9C8A8058406FF17 /* libPods-RUTextSize.a in Frameworks */,
-				3B189A55CCF875F329F7D1FE /* libPods.a in Frameworks */,
+				FBA28C6BE1EAC3A87CAFD4B1 /* Pods_RUTextSize_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,74 +86,22 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				40CDA24599C28A02F58CB4B6 /* libPods-Tests.a in Frameworks */,
+				DD43900127EE6ED7D7AAF701 /* Pods_RUTextSize_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4335F3241B2A46E80002344A /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				4335F3341B2A4E340002344A /* Category */,
-				4335F3251B2A46E80002344A /* RUAppDelegate.h */,
-				4335F3261B2A46E80002344A /* RUAppDelegate.m */,
-				4335F32C1B2A49380002344A /* UITableViewCell */,
-				4335F32D1B2A49380002344A /* UIViewController */,
-			);
-			path = Code;
-			sourceTree = "<group>";
-		};
-		4335F32C1B2A49380002344A /* UITableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				4335F3311B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.h */,
-				4335F3321B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m */,
-			);
-			path = UITableViewCell;
-			sourceTree = "<group>";
-		};
-		4335F32D1B2A49380002344A /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4335F32E1B2A49380002344A /* RUViewController.h */,
-				4335F32F1B2A49380002344A /* RUViewController.m */,
-			);
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		4335F3341B2A4E340002344A /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				4335F3351B2A4E490002344A /* UIView+RUCommonSizes.h */,
-				4335F3361B2A4E490002344A /* UIView+RUCommonSizes.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		58515451FC5E5E4B30829063 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E75675B7E57762C96D0ACD60 /* Pods-RUTextSize.debug.xcconfig */,
-				CDA9F6BBFE5C5FCBBC275567 /* Pods-RUTextSize.release.xcconfig */,
-				7E94053311F70EDFB774F4C5 /* Pods-Tests.debug.xcconfig */,
-				FBBA6E75A8D2FFBBF8DF142B /* Pods-Tests.release.xcconfig */,
-				6D9538CA0B3659DABC4560B1 /* Pods.debug.xcconfig */,
-				59C58101D920248628BE3B4C /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* RUTextSize */,
+				6003F593195388D20070C39A /* Example for RUTextSize */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				58515451FC5E5E4B30829063 /* Pods */,
+				E8FF617B39204091F33F6A37 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,20 +121,24 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				1BDCF9DF0E22096DBF16C76B /* libPods-RUTextSize.a */,
-				FCCB2A75B0B0A79EB813A244 /* libPods-Tests.a */,
-				0810B40DB6C87E459C6CA33E /* libPods.a */,
+				93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */,
+				DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F593195388D20070C39A /* RUTextSize */ = {
+		6003F593195388D20070C39A /* Example for RUTextSize */ = {
 			isa = PBXGroup;
 			children = (
-				4335F3241B2A46E80002344A /* Code */,
+				6003F59C195388D20070C39A /* RUAppDelegate.h */,
+				6003F59D195388D20070C39A /* RUAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6003F5A5195388D20070C39A /* RUViewController.h */,
+				6003F5A6195388D20070C39A /* RUViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
+			name = "Example for RUTextSize";
 			path = RUTextSize;
 			sourceTree = "<group>";
 		};
@@ -232,51 +175,64 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				8741039D299563FFB94C05A0 /* RUTextSize.podspec */,
-				3EF39BA31DECC9E2FFB7E31D /* README.md */,
-				33429B3653BEDA5FA0247C7B /* LICENSE */,
+				EFAD8BE8E80A09344DE754CF /* RUTextSize.podspec */,
+				0359164FA691DE1A5E1A845C /* README.md */,
+				544E7D3949A83CE85A7E3E97 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E8FF617B39204091F33F6A37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				157F17378ED151648C78379F /* Pods-RUTextSize_Example.debug.xcconfig */,
+				FE9A67F508748503B3D1A14A /* Pods-RUTextSize_Example.release.xcconfig */,
+				F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */,
+				B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* RUTextSize */ = {
+		6003F589195388D20070C39A /* RUTextSize_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize" */;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Example" */;
 			buildPhases = (
-				1F9B382B2FEAA0F63CC217EC /* Check Pods Manifest.lock */,
+				A07B2629B889DCE80427D38B /* Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				8F0C78C5CFEE30658704A27E /* Copy Pods Resources */,
+				FBDA27B1B147FF4F6B28C99F /* Embed Pods Frameworks */,
+				36B83C4D799FC7564E72B8E2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RUTextSize;
+			name = RUTextSize_Example;
 			productName = RUTextSize;
 			productReference = 6003F58A195388D20070C39A /* RUTextSize.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6003F5AD195388D20070C39A /* Tests */ = {
+		6003F5AD195388D20070C39A /* RUTextSize_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Tests" */;
 			buildPhases = (
-				D384DAD5B86F0C769A7CBF29 /* Check Pods Manifest.lock */,
+				184DBEFCE5AA8D69F47DD406 /* Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				8004BCBD39695C68387643C4 /* Copy Pods Resources */,
+				8257BF2BEC9CC4E7F40C321F /* Embed Pods Frameworks */,
+				288ED09907D6631F6DD2C97B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				6003F5B4195388D20070C39A /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = RUTextSize_Tests;
 			productName = RUTextSizeTests;
 			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -289,7 +245,7 @@
 			attributes = {
 				CLASSPREFIX = RU;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Lee Pollard";
+				ORGANIZATIONNAME = "Benjamin Maer";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -309,8 +265,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* RUTextSize */,
-				6003F5AD195388D20070C39A /* Tests */,
+				6003F589195388D20070C39A /* RUTextSize_Example */,
+				6003F5AD195388D20070C39A /* RUTextSize_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -336,7 +293,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F9B382B2FEAA0F63CC217EC /* Check Pods Manifest.lock */ = {
+		184DBEFCE5AA8D69F47DD406 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,7 +308,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8004BCBD39695C68387643C4 /* Copy Pods Resources */ = {
+		288ED09907D6631F6DD2C97B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,10 +320,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F0C78C5CFEE30658704A27E /* Copy Pods Resources */ = {
+		36B83C4D799FC7564E72B8E2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,10 +335,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize/Pods-RUTextSize-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D384DAD5B86F0C769A7CBF29 /* Check Pods Manifest.lock */ = {
+		8257BF2BEC9CC4E7F40C321F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A07B2629B889DCE80427D38B /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,6 +366,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBDA27B1B147FF4F6B28C99F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -403,11 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4335F3331B2A496D0002344A /* RUTableViewCell_RUTextViewWithPlaceholderContainerView.m in Sources */,
+				6003F59E195388D20070C39A /* RUAppDelegate.m in Sources */,
+				6003F5A7195388D20070C39A /* RUViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				4335F3301B2A49380002344A /* RUViewController.m in Sources */,
-				4335F32A1B2A46E80002344A /* RUAppDelegate.m in Sources */,
-				4335F3371B2A4E490002344A /* UIView+RUCommonSizes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +409,7 @@
 /* Begin PBXTargetDependency section */
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* RUTextSize */;
+			target = 6003F589195388D20070C39A /* RUTextSize_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -523,13 +508,14 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E75675B7E57762C96D0ACD60 /* Pods-RUTextSize.debug.xcconfig */;
+			baseConfigurationReference = 157F17378ED151648C78379F /* Pods-RUTextSize_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RUTextSize/RUTextSize-Prefix.pch";
 				INFOPLIST_FILE = "RUTextSize/RUTextSize-Info.plist";
+				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -537,13 +523,14 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDA9F6BBFE5C5FCBBC275567 /* Pods-RUTextSize.release.xcconfig */;
+			baseConfigurationReference = FE9A67F508748503B3D1A14A /* Pods-RUTextSize_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RUTextSize/RUTextSize-Prefix.pch";
 				INFOPLIST_FILE = "RUTextSize/RUTextSize-Info.plist";
+				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -551,9 +538,9 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E94053311F70EDFB774F4C5 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RUTextSize.app/RUTextSize";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,16 +554,16 @@
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RUTextSize_Example.app/RUTextSize_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBBA6E75A8D2FFBBF8DF142B /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RUTextSize.app/RUTextSize";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -586,7 +573,7 @@
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RUTextSize_Example.app/RUTextSize_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -603,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize" */ = {
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C0195388D20070C39A /* Debug */,
@@ -612,7 +599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
