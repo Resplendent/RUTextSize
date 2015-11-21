@@ -27,8 +27,11 @@
 			.height = CGRectGetMaxY(textBoundingRect)
 		};
 	}
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpointer-bool-conversion"
 	else if ((&NSFontAttributeName) &&
 			 (&NSParagraphStyleAttributeName))
+#pragma clang diagnostic pop
 	{
 		UIFont* font = [attributes objectForKey:NSFontAttributeName];
 		NSParagraphStyle *style = [attributes objectForKey:NSParagraphStyleAttributeName];
