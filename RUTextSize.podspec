@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RUTextSize"
-  s.version          = "0.1.5"
+  s.version          = "0.1.6"
   s.summary          = "Helpers for getting size of common UI components."
   # s.description      = <<-DESC
   #                      An optional longer description of RUTextSize
@@ -34,5 +34,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ResplendentUtilities', '~> 0.2'
+  s.dependency 'ResplendentUtilities', '~> 0.3.0'
 end
