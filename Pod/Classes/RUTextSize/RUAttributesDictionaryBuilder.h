@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UIColor* textColor;
 @property (nonatomic, assign) BOOL textColorShouldUseCoreTextKey;
 @property (nonatomic, assign) NSTextAlignment textAlignment;
+@property (nonatomic, strong) NSNumber* kerning;
 
 -(void)absorbPropertiesFromLabel:(UILabel*)label;
 -(void)absorbPropertiesFromButton:(UIButton*)button;
