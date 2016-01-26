@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.authors          = {
-							"Benjamin Maer" => "ben@resplendent.co"
+							"Benjamin Maer" => "ben@resplendent.co",
 							"Lee Pollard" => "tjdet11@gmail.com"
 }
   s.source           = { :git => "https://github.com/Resplendent/RUTextSize.git", :tag => "v#{s.version}"}
