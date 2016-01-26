@@ -20,7 +20,10 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/Resplendent/RUTextSize"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Lee Pollard" => "tjdet11@gmail.com" }
+  s.authors          = {
+							"Benjamin Maer" => "ben@resplendent.co"
+							"Lee Pollard" => "tjdet11@gmail.com"
+}
   s.source           = { :git => "https://github.com/Resplendent/RUTextSize.git", :tag => "v#{s.version}"}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
