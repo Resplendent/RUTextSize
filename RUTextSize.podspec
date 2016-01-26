@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RUTextSize"
-  s.version          = "0.1.7"
+  s.version          = "0.1.8"
   s.summary          = "Helpers for getting size of common UI components."
   # s.description      = <<-DESC
   #                      An optional longer description of RUTextSize
@@ -20,7 +20,10 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/Resplendent/RUTextSize"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Lee Pollard" => "tjdet11@gmail.com" }
+  s.authors          = {
+							"Benjamin Maer" => "ben@resplendent.co",
+							"Lee Pollard" => "tjdet11@gmail.com"
+}
   s.source           = { :git => "https://github.com/Resplendent/RUTextSize.git", :tag => "v#{s.version}"}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -34,5 +37,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ResplendentUtilities', '~> 0.3.0'
+  s.dependency 'ResplendentUtilities', '~> 0.4.0'
 end
