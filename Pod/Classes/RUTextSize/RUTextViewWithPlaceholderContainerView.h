@@ -15,20 +15,41 @@
 
 @interface RUTextViewWithPlaceholderContainerView : UIView <UITextViewDelegate>
 
-@property (nonatomic, readonly) UITextView* textView;
-@property (nonatomic, readonly) CGRect textViewFrame;
-@property (nonatomic, assign) BOOL centerTextVertically;
+#pragma mark - textView
+/*
+ If using `centerTextVertically`, `textView`'s contentInset's top and bottom are used by this class, and shouldn't be used externally.
+ */
+@property (nonatomic, readonly, nullable) UITextView* textView;
+@property (nonatomic, assign) UIEdgeInsets textViewFrameInsets;
+-(CGRect)textViewFrame;
 
-@property (nonatomic, readonly) UILabel* textViewPlaceholderLabel;
-@property (nonatomic, readonly) CGRect textViewPlaceholderLabelFrame;
-
-@property (nonatomic, assign) id<RUTextViewWithPlaceholderContainerView_textDelegate> textDelegate;
-
+#pragma mark - textViewPlaceholderLabel
+@property (nonatomic, readonly, nullable) UILabel* textViewPlaceholderLabel;
+@property (nonatomic, assign) UIEdgeInsets textViewPlaceholderLabelFrameInsets;
+/*
+ Getter method `textViewPlaceholderLabelFrame`
+  - takes up the entire width of the view, before insets. Makes it ideal for centering text with native `textAlignment` property
+  - ceils the origin, so that text is always on an integer value.
+ 
+ */
+-(CGRect)textViewPlaceholderLabelFrame;
 -(void)updateTextViewPlaceholderLabelVisilibity;
 
+#pragma mark - centerTextVertically
+/*
+ Applies to `textView` and `textViewPlaceholderLabel`.
+ 
+ Uses `textView`'s contentInset's top and bottom. So, if `centerTextVertically` is set to YES, you don't want to also be using `textView`'s contentInset's top and bottom.
+ */
+@property (nonatomic, assign) BOOL centerTextVertically;
+
+#pragma mark - textDelegate
+@property (nonatomic, assign, nullable) id<RUTextViewWithPlaceholderContainerView_textDelegate> textDelegate;
+@property (nonatomic, assign, nullable) id<RUTextViewWithPlaceholderContainerView_textShouldChangeDelegate> textShouldChangeDelegate;
+
 #pragma mark - UITextViewDelegate
-//- (void)textViewwill
-- (void)textViewDidEndEditing:(UITextView *)theTextView;
-- (void)textViewDidChange:(UITextView *)textView;
+-(void)textViewDidBeginEditing:(nonnull UITextView*)textView;
+-(void)textViewDidEndEditing:(nonnull UITextView*)theTextView;
+-(void)textViewDidChange:(nonnull UITextView*)textView;
 
 @end

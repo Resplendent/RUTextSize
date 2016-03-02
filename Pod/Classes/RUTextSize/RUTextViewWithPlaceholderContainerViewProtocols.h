@@ -20,6 +20,19 @@
 
 @protocol RUTextViewWithPlaceholderContainerView_textDelegate <NSObject>
 
--(void)textViewWithPlaceholderContainerView:(RUTextViewWithPlaceholderContainerView*)textViewWithPlaceholderContainerView textViewDidChangeText:(NSString*)text;
+-(void)textViewWithPlaceholderContainerView:(nonnull RUTextViewWithPlaceholderContainerView*)textViewWithPlaceholderContainerView
+					  textViewDidChangeText:(nullable NSString*)text;
+
+@end
+
+
+
+
+
+@protocol RUTextViewWithPlaceholderContainerView_textShouldChangeDelegate <NSObject>
+
+-(BOOL)textViewWithPlaceholderContainerView:(nonnull RUTextViewWithPlaceholderContainerView*)textViewWithPlaceholderContainerView
+					shouldChangeTextInRange:(NSRange)range
+							replacementText:(nonnull NSString*)text;
 
 @end

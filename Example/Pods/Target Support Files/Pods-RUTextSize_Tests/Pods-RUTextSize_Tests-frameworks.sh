@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-RUTextSize_Tests/RTSMTableSectionManager.framework"
   install_framework "Pods-RUTextSize_Tests/RUTextSize.framework"
   install_framework "Pods-RUTextSize_Tests/ResplendentUtilities.framework"
   install_framework "Pods-RUTextSize_Tests/Expecta.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RUTextSize_Tests/Specta.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-RUTextSize_Tests/RTSMTableSectionManager.framework"
   install_framework "Pods-RUTextSize_Tests/RUTextSize.framework"
   install_framework "Pods-RUTextSize_Tests/ResplendentUtilities.framework"
   install_framework "Pods-RUTextSize_Tests/Expecta.framework"

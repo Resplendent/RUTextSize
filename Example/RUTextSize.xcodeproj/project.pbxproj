@@ -12,8 +12,6 @@
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* RUAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* RUViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -21,6 +19,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D7D6399B1C879EA600DD74B4 /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D639961C879EA600DD74B4 /* RUAppDelegate.m */; };
+		D7D6399C1C879EA600DD74B4 /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6399A1C879EA600DD74B4 /* RUViewController.m */; };
+		D7D6399F1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6399E1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m */; };
 		DD43900127EE6ED7D7AAF701 /* Pods_RUTextSize_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */; };
 		FBA28C6BE1EAC3A87CAFD4B1 /* Pods_RUTextSize_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */; };
 /* End PBXBuildFile section */
@@ -47,10 +48,6 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* RUTextSize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RUTextSize-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* RUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* RUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* RUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* RUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* RUTextSize_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RUTextSize_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,6 +58,12 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D7D639951C879EA600DD74B4 /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
+		D7D639961C879EA600DD74B4 /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
+		D7D639991C879EA600DD74B4 /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
+		D7D6399A1C879EA600DD74B4 /* RUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
+		D7D6399D1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUGenericTableViewCell_CustomView.h; sourceTree = "<group>"; };
+		D7D6399E1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUGenericTableViewCell_CustomView.m; sourceTree = "<group>"; };
 		DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD8BE8E80A09344DE754CF /* RUTextSize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RUTextSize.podspec; path = ../RUTextSize.podspec; sourceTree = "<group>"; };
 		F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,11 +133,8 @@
 		6003F593195388D20070C39A /* Example for RUTextSize */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* RUAppDelegate.h */,
-				6003F59D195388D20070C39A /* RUAppDelegate.m */,
+				D7D639941C879EA600DD74B4 /* Code */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* RUViewController.h */,
-				6003F5A6195388D20070C39A /* RUViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -180,6 +180,35 @@
 				544E7D3949A83CE85A7E3E97 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		D7D639941C879EA600DD74B4 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				D7D639951C879EA600DD74B4 /* RUAppDelegate.h */,
+				D7D639961C879EA600DD74B4 /* RUAppDelegate.m */,
+				D7D639971C879EA600DD74B4 /* UITableViewCell */,
+				D7D639981C879EA600DD74B4 /* UIViewController */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		D7D639971C879EA600DD74B4 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D7D6399D1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.h */,
+				D7D6399E1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		D7D639981C879EA600DD74B4 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7D639991C879EA600DD74B4 /* RUViewController.h */,
+				D7D6399A1C879EA600DD74B4 /* RUViewController.m */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		E8FF617B39204091F33F6A37 /* Pods */ = {
@@ -390,9 +419,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* RUAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* RUViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				D7D6399C1C879EA600DD74B4 /* RUViewController.m in Sources */,
+				D7D6399F1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m in Sources */,
+				D7D6399B1C879EA600DD74B4 /* RUAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
