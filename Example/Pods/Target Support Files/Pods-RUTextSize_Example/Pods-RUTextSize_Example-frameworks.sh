@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-RUTextSize_Example/RTSMTableSectionManager.framework"
   install_framework "Pods-RUTextSize_Example/RUTextSize.framework"
   install_framework "Pods-RUTextSize_Example/ResplendentUtilities.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-RUTextSize_Example/RTSMTableSectionManager.framework"
   install_framework "Pods-RUTextSize_Example/RUTextSize.framework"
   install_framework "Pods-RUTextSize_Example/ResplendentUtilities.framework"
 fi

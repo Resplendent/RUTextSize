@@ -1,5 +1,5 @@
 //
-//  RUViewController.h
+//  RUAppDelegate.h
 //  RUTextSize
 //
 //  Created by Benjamin Maer on 11/20/2015.
@@ -8,6 +8,12 @@
 
 @import UIKit;
 
-@interface RUViewController : UIViewController
+
+
+
+
+@interface RUAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end

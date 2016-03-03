@@ -4,6 +4,8 @@ use_frameworks!
 
 def import_pods
 	pod "RUTextSize", :path => "../"
+	
+	pod 'RTSMTableSectionManager', '0.1.2'
 end
 
 
