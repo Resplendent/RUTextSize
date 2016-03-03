@@ -45,6 +45,8 @@
 
 #pragma mark - textDelegate
 @property (nonatomic, assign, nullable) id<RUTextViewWithPlaceholderContainerView_textDelegate> textDelegate;
+
+#pragma mark - textShouldChangeDelegate
 @property (nonatomic, assign, nullable) id<RUTextViewWithPlaceholderContainerView_textShouldChangeDelegate> textShouldChangeDelegate;
 
 #pragma mark - UITextViewDelegate
