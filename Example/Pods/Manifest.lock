@@ -11,7 +11,7 @@ PODS:
   - ResplendentUtilities (0.4.5)
   - RTSMTableSectionManager (0.1.2):
     - ResplendentUtilities (~> 0.4.0)
-  - RUTextSize (0.1.8):
+  - RUTextSize (0.1.9):
     - ResplendentUtilities (~> 0.4.0)
   - Specta (1.0.5)
 
@@ -33,7 +33,7 @@ SPEC CHECKSUMS:
   FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
   ResplendentUtilities: b8eca9e9f5b004dee58a292d054bff26c9dba5f9
   RTSMTableSectionManager: 94365bf9a7fd2a33ae9a5401b5336cb3e468e332
-  RUTextSize: ba9ca025bc47f9ca49c013b0eee75bc9e87b3c6f
+  RUTextSize: b6ed6605a668513f790a5c83e135b0f98122e78f
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
 COCOAPODS: 0.39.0
