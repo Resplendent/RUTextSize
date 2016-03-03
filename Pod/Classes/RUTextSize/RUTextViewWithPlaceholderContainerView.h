@@ -30,7 +30,6 @@
  Getter method `textViewPlaceholderLabelFrame`
   - takes up the entire width of the view, before insets. Makes it ideal for centering text with native `textAlignment` property
   - ceils the origin, so that text is always on an integer value.
- 
  */
 -(CGRect)textViewPlaceholderLabelFrame;
 -(void)updateTextViewPlaceholderLabelVisilibity;
