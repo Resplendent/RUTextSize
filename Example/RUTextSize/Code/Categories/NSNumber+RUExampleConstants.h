@@ -1,5 +1,5 @@
 //
-//  NSNumber+RUConstants.h
+//  NSNumber+RUExampleConstants.h
 //  RUTextSize
 //
 //  Created by Benjamin Maer on 3/4/16.
@@ -12,7 +12,7 @@
 
 
 
-@interface NSNumber (RUConstants)
+@interface NSNumber (RUExampleConstants)
 
 #pragma mark - Paddings
 +(CGFloat)ru_padding_general;

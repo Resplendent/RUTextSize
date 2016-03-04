@@ -22,7 +22,7 @@
 		D7A14DA61C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DA51C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */; };
 		D7A14DA91C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DA81C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m */; };
 		D7A14DAC1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DAB1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m */; };
-		D7A14DB01C8A29EA00953808 /* NSNumber+RUConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DAF1C8A29EA00953808 /* NSNumber+RUConstants.m */; };
+		D7A14DB01C8A29EA00953808 /* NSNumber+RUExampleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DAF1C8A29EA00953808 /* NSNumber+RUExampleConstants.m */; };
 		D7D6399B1C879EA600DD74B4 /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D639961C879EA600DD74B4 /* RUAppDelegate.m */; };
 		D7D6399C1C879EA600DD74B4 /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6399A1C879EA600DD74B4 /* RUViewController.m */; };
 		D7D6399F1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6399E1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m */; };
@@ -69,8 +69,8 @@
 		D7A14DA81C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_UILabel_TextSize.m; sourceTree = "<group>"; };
 		D7A14DAA1C8A217600953808 /* RUTableViewCell_LabelSizedToText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUTableViewCell_LabelSizedToText.h; sourceTree = "<group>"; };
 		D7A14DAB1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUTableViewCell_LabelSizedToText.m; sourceTree = "<group>"; };
-		D7A14DAE1C8A29EA00953808 /* NSNumber+RUConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RUConstants.h"; sourceTree = "<group>"; };
-		D7A14DAF1C8A29EA00953808 /* NSNumber+RUConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RUConstants.m"; sourceTree = "<group>"; };
+		D7A14DAE1C8A29EA00953808 /* NSNumber+RUExampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RUExampleConstants.h"; sourceTree = "<group>"; };
+		D7A14DAF1C8A29EA00953808 /* NSNumber+RUExampleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RUExampleConstants.m"; sourceTree = "<group>"; };
 		D7D639951C879EA600DD74B4 /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
 		D7D639961C879EA600DD74B4 /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
 		D7D639991C879EA600DD74B4 /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 		D7A14DAD1C8A29D200953808 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				D7A14DAE1C8A29EA00953808 /* NSNumber+RUConstants.h */,
-				D7A14DAF1C8A29EA00953808 /* NSNumber+RUConstants.m */,
+				D7A14DAE1C8A29EA00953808 /* NSNumber+RUExampleConstants.h */,
+				D7A14DAF1C8A29EA00953808 /* NSNumber+RUExampleConstants.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -457,7 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A14DAC1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m in Sources */,
-				D7A14DB01C8A29EA00953808 /* NSNumber+RUConstants.m in Sources */,
+				D7A14DB01C8A29EA00953808 /* NSNumber+RUExampleConstants.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				D7A14DA61C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */,
 				D7D6399C1C879EA600DD74B4 /* RUViewController.m in Sources */,

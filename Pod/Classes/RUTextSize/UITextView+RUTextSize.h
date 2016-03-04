@@ -14,6 +14,7 @@
 
 @interface UITextView (RUTextSize)
 
+#pragma mark - Text Size
 -(CGSize)ru_textSizeConstrainedToWidth:(CGFloat)width;
 -(CGSize)ru_textSize;
 

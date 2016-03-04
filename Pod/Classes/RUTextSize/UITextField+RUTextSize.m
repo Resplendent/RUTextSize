@@ -17,6 +17,7 @@
 
 @implementation UITextField (RUTextSize)
 
+#pragma mark - Text Size
 -(CGSize)ruTextSizeConstrainedToWidth:(CGFloat)width
 {
 	if ([self respondsToSelector:@selector(attributedText)] &&

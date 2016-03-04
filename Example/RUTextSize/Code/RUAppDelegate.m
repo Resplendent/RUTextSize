@@ -9,6 +9,10 @@
 #import "RUAppDelegate.h"
 #import "RUNavigationController.h"
 
+#if DEBUG
+#import "UILabel+RUTextSize.h"
+#endif
+
 
 
 
@@ -17,6 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#if DEBUG
+	[UILabel DEBUG__NSAttributedString_RUTextSize_unitTest];
+#endif
+
 	UIWindow* window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 	[window setBackgroundColor:[UIColor redColor]];
 	[window setRootViewController:[RUNavigationController new]];

@@ -11,6 +11,7 @@
 
 #import <ResplendentUtilities/RUConditionalReturn.h>
 #import <ResplendentUtilities/UIView+RUUtility.h>
+#import <ResplendentUtilities/RUConstants.h>
 
 
 
@@ -88,5 +89,33 @@
 	
 	[self setNeedsLayout];
 }
+
+#if DEBUG
+#pragma mark - Unit Testing
+-(BOOL)DEBUG__NSAttributedString_RUTextSize_unitTest
+{
+	NSString* DEBUG__unitTest_errorMessage = [self DEBUG__NSAttributedString_RUTextSize_unitTest_errorMessage];
+	if (DEBUG__unitTest_errorMessage)
+	{
+		NSAssert(false, DEBUG__unitTest_errorMessage);
+		return NO;
+	}
+	
+	return YES;
+}
+
+-(nullable NSString*)DEBUG__NSAttributedString_RUTextSize_unitTest_errorMessage
+{
+	CGRect labelSizedToText_frame = self.labelSizedToText.frame;
+	CGRect labelSizedToText_frame_shouldBeHeight = UIEdgeInsetsInsetRect(self.contentView.bounds, (UIEdgeInsets){
+		.top		= self.expectedDebugValue_topPadding,
+		.left		= self.labelSizedToText_padding_left,
+	});
+
+	return (CGRectGetHeight(labelSizedToText_frame) == CGRectGetHeight(labelSizedToText_frame_shouldBeHeight) ?
+			nil :
+			RUStringWithFormat(@"labelSizedToText_frame %@ should have the same height as labelSizedToText_frame_shouldBe %@",NSStringFromCGRect(labelSizedToText_frame),NSStringFromCGRect(labelSizedToText_frame_shouldBeHeight)));
+}
+#endif
 
 @end

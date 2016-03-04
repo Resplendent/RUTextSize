@@ -15,6 +15,17 @@
 
 @interface NSAttributedString (RUTextSize)
 
+#pragma mark - Text Size
 - (CGSize)ru_textSizeWithBoundingWidth:(CGFloat)boundingWidth;
+
+#if DEBUG
+#pragma mark - Unit Testing
+-(BOOL)DEBUG__NSAttributedString_RUTextSize_unitTest_withBoundingSize:(CGSize)boundingSize
+													 textBoundingRect:(CGRect)textBoundingRect
+															  options:(NSStringDrawingOptions)options;
+-(nullable NSString*)DEBUG__NSAttributedString_RUTextSize_unitTest_errorMessage_withBoundingSize:(CGSize)boundingSize
+																				textBoundingRect:(CGRect)textBoundingRect
+																						 options:(NSStringDrawingOptions)options;
+#endif
 
 @end

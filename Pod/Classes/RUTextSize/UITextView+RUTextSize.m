@@ -17,6 +17,7 @@
 
 @implementation UITextView (RUTextSize)
 
+#pragma mark - Text Size
 -(CGSize)ru_textSizeConstrainedToWidth:(CGFloat)width
 {
 	if (([self.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) &&
