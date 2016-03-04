@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '56BF65EC46B1BD8F787E5CA7'
+               BlueprintIdentifier = 'AD1F31CAD8DE0E635D8855A6'
                BlueprintName = 'RUTextSize'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'RUTextSize.framework'>
