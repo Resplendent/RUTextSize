@@ -1,6 +1,6 @@
 {
   "name": "RUTextSize",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "summary": "Helpers for getting size of common UI components.",
   "homepage": "https://github.com/Resplendent/RUTextSize",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/Resplendent/RUTextSize.git",
-    "tag": "v0.1.9"
+    "tag": "v0.1.10"
   },
   "platforms": {
     "ios": "7.0"
