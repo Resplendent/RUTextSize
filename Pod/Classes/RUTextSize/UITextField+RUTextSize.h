@@ -14,6 +14,7 @@
 
 @interface UITextField (RUTextSize)
 
+#pragma mark - Text Size
 -(CGSize)ruTextSizeConstrainedToWidth:(CGFloat)width;
 -(CGSize)ruTextSize;
 

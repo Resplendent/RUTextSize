@@ -14,7 +14,13 @@
 
 @interface UILabel (RUTextSize)
 
+#pragma mark - Text Size
 -(CGSize)ruTextSizeConstrainedToWidth:(CGFloat)width;
 -(CGSize)ruTextSize;
+
+#if DEBUG
+#pragma mark - Unit Testing
++(void)DEBUG__NSAttributedString_RUTextSize_unitTest;
+#endif
 
 @end

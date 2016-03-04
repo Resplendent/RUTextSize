@@ -2,6 +2,7 @@
 
 #import "NSAttributedString+RUTextSize.h"
 #import "NSString+RUTextSize.h"
+#import "NSString+RUTextSizeStrings.h"
 #import "RUAttributesDictionaryBuilder.h"
 #import "RUTextViewWithPlaceholderContainerView.h"
 #import "RUTextViewWithPlaceholderContainerViewProtocols.h"

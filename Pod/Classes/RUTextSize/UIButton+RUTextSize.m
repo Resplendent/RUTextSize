@@ -17,6 +17,7 @@
 
 @implementation UIButton (RUTextSize)
 
+#pragma mark - Current Title Size
 -(CGSize)ru_currentTitleTextSizeConstrainedToWidth:(CGFloat)width
 {
 	NSString* currentTitle = self.currentTitle;
@@ -41,7 +42,7 @@
 	return [self ru_currentTitleTextSizeConstrainedToWidth:CGFLOAT_MAX];
 }
 
-#pragma mark - Attributed Title
+#pragma mark - Current Attribed Title Size
 -(CGSize)ru_currentAttributedTitleTextSizeConstrainedToWidth:(CGFloat)width
 {
 	if ([self respondsToSelector:@selector(currentAttributedTitle)])

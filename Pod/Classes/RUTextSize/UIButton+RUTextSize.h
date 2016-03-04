@@ -14,9 +14,11 @@
 
 @interface UIButton (RUTextSize)
 
+#pragma mark - Current Title Size
 -(CGSize)ru_currentTitleTextSizeConstrainedToWidth:(CGFloat)width;
 -(CGSize)ru_currentTitleTextSize;
 
+#pragma mark - Current Attribed Title Size
 -(CGSize)ru_currentAttributedTitleTextSizeConstrainedToWidth:(CGFloat)width;
 -(CGSize)ru_currentAttributedTitleTextSize;
 

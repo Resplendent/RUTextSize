@@ -7,8 +7,9 @@
 //
 
 #import "RUViewController.h"
-#import "RUGenericTableViewCell_CustomView.h"
 #import "RUTextViewWithPlaceholderContainerView.h"
+#import "RUViewController_RUTextViewWithPlaceholderContainerView.h"
+#import "RUViewController_UILabel_TextSize.h"
 
 #import <ResplendentUtilities/NSString+RUMacros.h>
 #import <ResplendentUtilities/RUConditionalReturn.h>
@@ -20,13 +21,11 @@
 
 
 typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
+	RUViewController__tableView_section_UILabel_textSize,
 	RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
-	RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontally,
-	RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredVertically,
-	RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontallyAndVertically,
 
-	RUViewController__tableView_section__first		= RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
-	RUViewController__tableView_section__last		= RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontallyAndVertically,
+	RUViewController__tableView_section__first		= RUViewController__tableView_section_UILabel_textSize,
+	RUViewController__tableView_section__last		= RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
 };
 
 
@@ -42,12 +41,11 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 #pragma mark - tableSectionManager
 @property (nonatomic, readonly, nullable) RTSMTableSectionManager* tableSectionManager;
 
-#pragma mark - Header Label Text
--(nullable NSString*)headerLabelTextForIndexPathSection:(NSInteger)indexPathSection;
+#pragma mark - cell Text
+-(nullable NSString*)cellTextForSection:(RUViewController__tableView_section)section;
 
 #pragma mark - Table View Cells
--(nonnull RUGenericTableViewCell_CustomView*)cellForTableSection:(RUViewController__tableView_section)tableSection;
--(nonnull RUGenericTableViewCell_CustomView*)genericTableViewCell_CustomView_withCustomView:(nonnull UIView*)customView;
+-(nonnull UITableViewCell*)cellForTableSection:(RUViewController__tableView_section)tableSection;
 
 #pragma mark - genericTableViewCell_CustomView Custom Views
 -(nonnull RUTextViewWithPlaceholderContainerView*)genericTableViewCell_CustomView_RUTextViewWithPlaceholderContainerView;
@@ -71,6 +69,8 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 {
 	[super viewDidLoad];
 
+	[self.view setBackgroundColor:[UIColor whiteColor]];
+
 	_tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
 	[self.tableView setDelegate:self];
 	[self.tableView setDataSource:self];
@@ -93,9 +93,7 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 #pragma mark - tableView
 -(CGRect)tableViewFrame
 {
-	return UIEdgeInsetsInsetRect(self.view.bounds, (UIEdgeInsets){
-		.top	= CGRectGetMaxY([UIApplication sharedApplication].statusBarFrame),
-	});
+	return self.view.bounds;
 }
 
 #pragma mark - UITableViewDataSource,UITableViewDelegate
@@ -125,30 +123,8 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 	RUViewController__tableView_section tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
 	switch (tableSection)
 	{
+		case RUViewController__tableView_section_UILabel_textSize:
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontally:
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredVertically:
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontallyAndVertically:
-			return 60.0f;
-			break;
-	}
-	
-	NSAssert(false, @"unhandled tableSection %li",(long)tableSection);
-	return 0.0f;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-	RUViewController__tableView_section tableSection = [self.tableSectionManager sectionForIndexPathSection:section];
-	switch (tableSection)
-	{
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
-			return 20.0f;
-			break;
-
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontally:
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredVertically:
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontallyAndVertically:
 			return 30.0f;
 			break;
 	}
@@ -157,85 +133,53 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 	return 0.0f;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UILabel* headerLabel = [UILabel new];
-	[headerLabel setBackgroundColor:[UIColor lightGrayColor]];
-	[headerLabel setTextAlignment:NSTextAlignmentCenter];
-	[headerLabel setFont:[UIFont systemFontOfSize:12.0f weight:UIFontWeightMedium]];
-	[headerLabel setTextColor:[UIColor darkTextColor]];
-	[headerLabel setNumberOfLines:0];
-	[headerLabel setText:[self headerLabelTextForIndexPathSection:section]];
+	RUViewController__tableView_section tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
+	switch (tableSection)
+	{
+		case RUViewController__tableView_section_UILabel_textSize:
+			[self.navigationController pushViewController:[RUViewController_UILabel_TextSize new] animated:YES];
+			break;
 
-	return headerLabel;
+		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
+			[self.navigationController pushViewController:[RUViewController_RUTextViewWithPlaceholderContainerView new] animated:YES];
+			break;
+	}
 }
 
 #pragma mark - Header Label Text
--(nullable NSString*)headerLabelTextForIndexPathSection:(NSInteger)indexPathSection
+-(nullable NSString*)cellTextForSection:(RUViewController__tableView_section)section
 {
-	RUViewController__tableView_section tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPathSection];
-	switch (tableSection)
+	switch (section)
 	{
+		case RUViewController__tableView_section_UILabel_textSize:
+			return @"UILabel - Text Size";
+			break;
+
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
 			return @"RUGenericTableViewCell_CustomView";
 			break;
-			
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontally:
-			return @"RUGenericTableViewCell_CustomView\ntext centered horizontally";
-			break;
-
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredVertically:
-			return @"RUGenericTableViewCell_CustomView\ntext centered vertically";
-			break;
-
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontallyAndVertically:
-			return @"RUGenericTableViewCell_CustomView\ntext centered horizontally and vertically";
-			break;
 	}
 	
-	NSAssert(false, @"unhandled tableSection %li",(long)tableSection);
+	NSAssert(false, @"unhandled tableSection %li",(long)section);
 	return nil;
 }
 
 #pragma mark - Table View Cells
--(nonnull RUGenericTableViewCell_CustomView*)cellForTableSection:(RUViewController__tableView_section)tableSection
+-(nonnull UITableViewCell*)cellForTableSection:(RUViewController__tableView_section)tableSection
 {
-	switch (tableSection)
-	{
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
-			return [self genericTableViewCell_CustomView_withCustomView:[self genericTableViewCell_CustomView_RUTextViewWithPlaceholderContainerView]];
-			break;
-			
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontally:
-			return [self genericTableViewCell_CustomView_withCustomView:[self genericTableViewCell_CustomView_RUTextViewWithPlaceholderContainerView_textCenteredHorizontally]];
-			break;
-			
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredVertically:
-			return [self genericTableViewCell_CustomView_withCustomView:[self genericTableViewCell_CustomView_RUTextViewWithPlaceholderContainerView_textCenteredVertically]];
-			break;
-
-		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView_textCenteredHorizontallyAndVertically:
-			return [self genericTableViewCell_CustomView_withCustomView:[self genericTableViewCell_CustomView_RUTextViewWithPlaceholderContainerView_textCenteredHorizontallyAndVertically]];
-			break;
-	}
-
-	NSAssert(false, @"unhandled tableSection %li",(long)tableSection);
-	return nil;
-}
-
--(nonnull RUGenericTableViewCell_CustomView*)genericTableViewCell_CustomView_withCustomView:(nonnull UIView*)customView
-{
-	kRUDefineNSStringConstant(RUViewController__tableDequeIdentifier_RUGenericTableViewCell_CustomView);
-	RUGenericTableViewCell_CustomView* genericTableViewCell_CustomView = [self.tableView dequeueReusableCellWithIdentifier:RUViewController__tableDequeIdentifier_RUGenericTableViewCell_CustomView];
+	kRUDefineNSStringConstant(RUViewController__tableDequeIdentifier_UITableViewCell);
+	UITableViewCell* genericTableViewCell_CustomView = [self.tableView dequeueReusableCellWithIdentifier:RUViewController__tableDequeIdentifier_UITableViewCell];
 	if (genericTableViewCell_CustomView == nil)
 	{
-		genericTableViewCell_CustomView = [[RUGenericTableViewCell_CustomView alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RUViewController__tableDequeIdentifier_RUGenericTableViewCell_CustomView];
+		genericTableViewCell_CustomView = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RUViewController__tableDequeIdentifier_UITableViewCell];
 		[genericTableViewCell_CustomView setSelectionStyle:UITableViewCellSelectionStyleNone];
 		[genericTableViewCell_CustomView.layer setBorderColor:[UIColor darkGrayColor].CGColor];
 		[genericTableViewCell_CustomView.layer setBorderWidth:1.0f];
 	}
-
-	[genericTableViewCell_CustomView setCustomView:customView];
+	
+	[genericTableViewCell_CustomView.textLabel setText:[self cellTextForSection:tableSection]];
 	
 	return genericTableViewCell_CustomView;
 }

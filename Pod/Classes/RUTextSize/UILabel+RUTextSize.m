@@ -11,12 +11,17 @@
 #import "NSString+RUTextSize.h"
 #import "NSAttributedString+RUTextSize.h"
 
+#if DEBUG
+#import "NSString+RUTextSizeStrings.h"
+#endif
+
 
 
 
 
 @implementation UILabel (RUTextSize)
 
+#pragma mark - Text Size
 -(CGSize)ruTextSizeConstrainedToWidth:(CGFloat)width
 {
 	if ([self respondsToSelector:@selector(attributedText)] &&
@@ -44,5 +49,22 @@
 {
 	return [self ruTextSizeConstrainedToWidth:CGFLOAT_MAX];
 }
+
+#if DEBUG
+#pragma mark - Unit Testing
++(void)DEBUG__NSAttributedString_RUTextSize_unitTest
+{
+	NSString* superLongText = [NSString ru_exampleString_longestTest];
+	
+	UILabel* debugLabel = [UILabel new];
+	[debugLabel setFont:[UIFont systemFontOfSize:24.0f]];
+	[debugLabel setText:superLongText];
+	[debugLabel setLineBreakMode:NSLineBreakByWordWrapping];
+	
+	CGFloat const boundedWidth = 100.0f;
+
+	[debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
+}
+#endif
 
 @end
