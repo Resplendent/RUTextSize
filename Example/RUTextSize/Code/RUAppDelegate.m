@@ -7,6 +7,7 @@
 //
 
 #import "RUAppDelegate.h"
+#import "RUNavigationController.h"
 
 
 
@@ -16,7 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+	UIWindow* window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+	[window setBackgroundColor:[UIColor redColor]];
+	[window setRootViewController:[RUNavigationController new]];
+
+	[self setWindow:window];
+	[self.window makeKeyAndVisible];
+
+	// Override point for customization after application launch.
     return YES;
 }
 
