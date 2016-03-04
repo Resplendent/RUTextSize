@@ -9,6 +9,7 @@
 #import "RUViewController.h"
 #import "RUTextViewWithPlaceholderContainerView.h"
 #import "RUViewController_RUTextViewWithPlaceholderContainerView.h"
+#import "RUViewController_UILabel_TextSize.h"
 
 #import <ResplendentUtilities/NSString+RUMacros.h>
 #import <ResplendentUtilities/RUConditionalReturn.h>
@@ -20,9 +21,10 @@
 
 
 typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
+	RUViewController__tableView_section_UILabel_textSize,
 	RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
 
-	RUViewController__tableView_section__first		= RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
+	RUViewController__tableView_section__first		= RUViewController__tableView_section_UILabel_textSize,
 	RUViewController__tableView_section__last		= RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
 };
 
@@ -121,6 +123,7 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 	RUViewController__tableView_section tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
 	switch (tableSection)
 	{
+		case RUViewController__tableView_section_UILabel_textSize:
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
 			return 30.0f;
 			break;
@@ -135,6 +138,10 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 	RUViewController__tableView_section tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
 	switch (tableSection)
 	{
+		case RUViewController__tableView_section_UILabel_textSize:
+			[self.navigationController pushViewController:[RUViewController_UILabel_TextSize new] animated:YES];
+			break;
+
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
 			[self.navigationController pushViewController:[RUViewController_RUTextViewWithPlaceholderContainerView new] animated:YES];
 			break;
@@ -146,6 +153,10 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 {
 	switch (section)
 	{
+		case RUViewController__tableView_section_UILabel_textSize:
+			return @"UILabel - Text Size";
+			break;
+
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
 			return @"RUGenericTableViewCell_CustomView";
 			break;
