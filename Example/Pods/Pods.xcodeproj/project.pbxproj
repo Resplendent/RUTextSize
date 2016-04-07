@@ -975,6 +975,7 @@
 		D5044B7C8CB1BA2FF61AF471DD33F5DA /* NSString+RUCamelCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+RUCamelCase.m"; path = "Pod/Classes/ResplendentUtilities/Code/ResplendentUtilities/Category/NSString/NSString+RUCamelCase.m"; sourceTree = "<group>"; };
 		D542B4BC973F57BA7F0C24C6EED49420 /* Pods-RUTextSize_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RUTextSize_Example.modulemap"; sourceTree = "<group>"; };
 		D62588CCCA1B096B9673FE875A2B48B3 /* RTSMTableSectionRangeManager_SectionLengthDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSMTableSectionRangeManager_SectionLengthDelegate.h; path = Pod/Classes/RTSMTableSectionManager/TableSectionRangeManager/RTSMTableSectionRangeManager_SectionLengthDelegate.h; sourceTree = "<group>"; };
+		D769F8421CB7121300013882 /* RUAttributesDictionaryBuilder_attributeTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUAttributesDictionaryBuilder_attributeTypes.h; sourceTree = "<group>"; };
 		D7750EDC3A0ED8D2A8C227D2A626C840 /* EXPMatchers+contain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+contain.h"; path = "Expecta/Matchers/EXPMatchers+contain.h"; sourceTree = "<group>"; };
 		D861DDF4AA2B3FF98DE5FA3E93819E66 /* UIImage+RUImageFromColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+RUImageFromColor.h"; path = "Pod/Classes/ResplendentUtilities/Code/ResplendentUtilities/Category/UIImage/UIImage+RUImageFromColor.h"; sourceTree = "<group>"; };
 		D8666DEAD1F409BD800385425841580C /* RUGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RUGradientView.h; path = Pod/Classes/ResplendentUtilities/Code/ResplendentUtilities/View/Gradients/RUGradientView.h; sourceTree = "<group>"; };
@@ -1245,6 +1246,7 @@
 				D2A6859A99AFA69B062F577BF0FBBD9B /* NSString+RUTextSize.m */,
 				9796686BB175E157914850CCB62BCFA5 /* NSString+RUTextSizeStrings.h */,
 				460DEB8583CC22E831CD5A87B5516A43 /* NSString+RUTextSizeStrings.m */,
+				D769F8421CB7121300013882 /* RUAttributesDictionaryBuilder_attributeTypes.h */,
 				606EC80ED1D978A980B1B87F80E74228 /* RUAttributesDictionaryBuilder.h */,
 				ADD2FF2E4315478AFAB66F9C96F8A201 /* RUAttributesDictionaryBuilder.m */,
 				6C9AD5EEB508E2BCF4816DF930634C56 /* RUTextViewWithPlaceholderContainerView.h */,
