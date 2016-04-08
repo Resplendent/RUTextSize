@@ -27,7 +27,12 @@
 	if ([self respondsToSelector:@selector(attributedText)] &&
 		(self.attributedText.length))
 	{
-		return [self.attributedText ru_textSizeWithBoundingWidth:width];
+		RUAttributesDictionaryBuilder* attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
+		[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
+
+		NSAttributedString* attributedText_withAddedAttributesFromLabel = [self.attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:attributesDictionaryBuilder];
+
+		return [(attributedText_withAddedAttributesFromLabel ?: self.attributedText) ru_textSizeWithBoundingWidth:width];
 	}
 	else if (([self.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) &&
 		([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
