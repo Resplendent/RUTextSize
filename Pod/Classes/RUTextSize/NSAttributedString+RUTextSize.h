@@ -19,7 +19,7 @@
 -(CGSize)ru_textSizeWithBoundingWidth:(CGFloat)boundingWidth;
 
 #pragma mark - Attributed String With
--(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary*)attributes;
+-(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary*)attributesToAdd;
 
 #if DEBUG
 #pragma mark - Unit Testing

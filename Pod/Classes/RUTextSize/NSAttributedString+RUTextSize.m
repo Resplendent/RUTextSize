@@ -48,26 +48,26 @@
 }
 
 #pragma mark - Attributed String With
--(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary*)attributes
+-(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary*)attributesToAdd
 {
-	kRUConditionalReturn_ReturnValueNil(attributes == nil, YES);
-	kRUConditionalReturn_ReturnValueNil(attributes.count == 0, NO);
+	kRUConditionalReturn_ReturnValueNil(attributesToAdd == nil, YES);
+	kRUConditionalReturn_ReturnValueNil(attributesToAdd.count == 0, NO);
 
 	NSMutableAttributedString* mutableAttributedText = [NSMutableAttributedString new];
 	
 	[self enumerateAttributesInRange:NSMakeRange(0, self.length)
 							 options:(0)
 						  usingBlock:
-	 ^(NSDictionary<NSString *,id> * _Nonnull attributes, NSRange range, BOOL * _Nonnull stop) {
+	 ^(NSDictionary<NSString *,id> * _Nonnull attributes_existing, NSRange range, BOOL * _Nonnull stop) {
 		 
 		 NSMutableDictionary* attributes_new = [NSMutableDictionary dictionary];
-		 BOOL attributes_useOld = (attributes != nil);
-		 if (attributes_useOld)
+		 BOOL attributes_existing_useOld = (attributes_existing != nil);
+		 if (attributes_existing_useOld)
 		 {
-			 [attributes_new addEntriesFromDictionary:attributes];
+			 [attributes_new addEntriesFromDictionary:attributes_existing];
 		 }
 		 
-		 [attributes_new addEntriesFromDictionary:attributes];
+		 [attributes_new addEntriesFromDictionary:attributesToAdd];
 		 
 		 [mutableAttributedText appendAttributedString:[[NSAttributedString alloc]initWithString:[[self string]substringWithRange:range]
 																					  attributes:[attributes_new copy]]];
