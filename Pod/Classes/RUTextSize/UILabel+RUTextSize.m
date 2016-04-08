@@ -30,7 +30,7 @@
 		RUAttributesDictionaryBuilder* attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
 		[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
 
-		NSAttributedString* attributedText_withAddedAttributesFromLabel = [self.attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:attributesDictionaryBuilder];
+		NSAttributedString* attributedText_withAddedAttributesFromLabel = [self.attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder createAttributesDictionary]];
 
 		return [(attributedText_withAddedAttributesFromLabel ?: self.attributedText) ru_textSizeWithBoundingWidth:width];
 	}
