@@ -13,6 +13,7 @@
 
 #if DEBUG
 #import "NSString+RUTextSizeStrings.h"
+#import "NSAttributedString+RUTextSizeStrings.h"
 #endif
 
 
@@ -68,6 +69,10 @@
 	
 	CGFloat const boundedWidth = 100.0f;
 
+	[debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
+
+	NSAttributedString* ru_exampleAttributedString_emojiWithNewlineAndLabelAbsorb = [NSAttributedString ru_exampleAttributedString_emojiWithNewlineAndLabelAbsorb];
+	[debugLabel setAttributedText:ru_exampleAttributedString_emojiWithNewlineAndLabelAbsorb];
 	[debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
 }
 #endif

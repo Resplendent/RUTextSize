@@ -48,7 +48,7 @@
 }
 
 #pragma mark - Attributed String With
--(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary*)attributesToAdd
+-(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary<NSString *,id>*)attributesToAdd
 {
 	kRUConditionalReturn_ReturnValueNil(attributesToAdd == nil, YES);
 	kRUConditionalReturn_ReturnValueNil(attributesToAdd.count == 0, NO);
@@ -66,8 +66,15 @@
 		 {
 			 [attributes_new addEntriesFromDictionary:attributes_existing];
 		 }
-		 
-		 [attributes_new addEntriesFromDictionary:attributesToAdd];
+
+		 [attributesToAdd enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+
+			 if ([attributes_new objectForKey:key] == nil)
+			 {
+				 [attributes_new setObject:obj forKey:key];
+			 }
+
+		 }];
 		 
 		 [mutableAttributedText appendAttributedString:[[NSAttributedString alloc]initWithString:[[self string]substringWithRange:range]
 																					  attributes:[attributes_new copy]]];

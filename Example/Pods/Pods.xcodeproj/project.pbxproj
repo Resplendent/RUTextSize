@@ -367,6 +367,8 @@
 		D62B097C435ED421797BFA579621780C /* NSString+RUMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 557D240FA5219D1753EF30431F947FCC /* NSString+RUMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6838E42D9C50FC39B1D3006C0724E9C /* Expecta+Snapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB23DD79EC179FA47A0D7BCD44D6D26B /* Expecta+Snapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6D34507E041CE4E8EDE36C2DCDDB5AC /* RUExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE246413935DF21B749EE93F1FBCDC5 /* RUExceptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D709B37E1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = D709B37C1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.h */; };
+		D709B3801CBC1677007ADAB2 /* NSAttributedString+RUTextSizeStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = D709B37D1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.m */; };
 		D77A5E36EB251BF44E52CF70FB5DC549 /* RUNavigationControllerDelegate_navbarColorSetterProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 239D753169B020C8F4F25866E3F504BE /* RUNavigationControllerDelegate_navbarColorSetterProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7F64744555CA8BE0EBC6BC7B03C4DF4 /* ExpectaObject+FBSnapshotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECACB19BE15A87A3D3CF746428866A3 /* ExpectaObject+FBSnapshotTest.m */; };
 		D83677C54D2226C67886A525B0B46FBE /* EXPMatchers+beLessThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 696226D91A8A8E6880ED8091EED5B7F3 /* EXPMatchers+beLessThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -975,6 +977,8 @@
 		D5044B7C8CB1BA2FF61AF471DD33F5DA /* NSString+RUCamelCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+RUCamelCase.m"; path = "Pod/Classes/ResplendentUtilities/Code/ResplendentUtilities/Category/NSString/NSString+RUCamelCase.m"; sourceTree = "<group>"; };
 		D542B4BC973F57BA7F0C24C6EED49420 /* Pods-RUTextSize_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RUTextSize_Example.modulemap"; sourceTree = "<group>"; };
 		D62588CCCA1B096B9673FE875A2B48B3 /* RTSMTableSectionRangeManager_SectionLengthDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTSMTableSectionRangeManager_SectionLengthDelegate.h; path = Pod/Classes/RTSMTableSectionManager/TableSectionRangeManager/RTSMTableSectionRangeManager_SectionLengthDelegate.h; sourceTree = "<group>"; };
+		D709B37C1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+RUTextSizeStrings.h"; sourceTree = "<group>"; };
+		D709B37D1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RUTextSizeStrings.m"; sourceTree = "<group>"; };
 		D769F8421CB7121300013882 /* RUAttributesDictionaryBuilder_attributeTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RUAttributesDictionaryBuilder_attributeTypes.h; sourceTree = "<group>"; };
 		D7750EDC3A0ED8D2A8C227D2A626C840 /* EXPMatchers+contain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+contain.h"; path = "Expecta/Matchers/EXPMatchers+contain.h"; sourceTree = "<group>"; };
 		D861DDF4AA2B3FF98DE5FA3E93819E66 /* UIImage+RUImageFromColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+RUImageFromColor.h"; path = "Pod/Classes/ResplendentUtilities/Code/ResplendentUtilities/Category/UIImage/UIImage+RUImageFromColor.h"; sourceTree = "<group>"; };
@@ -1242,6 +1246,8 @@
 			children = (
 				54BD8C643A0D3FFB2BDBA05B5C6262B1 /* NSAttributedString+RUTextSize.h */,
 				C0DDE515A6B22330809E986ADD76DA2B /* NSAttributedString+RUTextSize.m */,
+				D709B37C1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.h */,
+				D709B37D1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.m */,
 				D1B44F8E884CE69C41E938352501E514 /* NSString+RUTextSize.h */,
 				D2A6859A99AFA69B062F577BF0FBBD9B /* NSString+RUTextSize.m */,
 				9796686BB175E157914850CCB62BCFA5 /* NSString+RUTextSizeStrings.h */,
@@ -1954,6 +1960,7 @@
 				E735386085CE344F6A01178CF4763852 /* EXPMatchers+beNil.h in Headers */,
 				397B320B7C59C168CC5B62E18ED8DEA0 /* EXPMatchers+beSubclassOf.h in Headers */,
 				76CCABE79C04444450153424D7CE1DC1 /* EXPMatchers+beSupersetOf.h in Headers */,
+				D709B37E1CBC1427007ADAB2 /* NSAttributedString+RUTextSizeStrings.h in Headers */,
 				85EB2F216487CB2E8F3FCCFBC4D69912 /* EXPMatchers+beTruthy.h in Headers */,
 				F0DDF02A078B917997FF025BB33BB842 /* EXPMatchers+conformTo.h in Headers */,
 				3C2700C7DAA15C6AF84A595865C42F4D /* EXPMatchers+contain.h in Headers */,
@@ -2727,6 +2734,7 @@
 				642BCCA82BFC93A0BBB3685285320171 /* NSString+RUTextSizeStrings.m in Sources */,
 				7CBCB14A2944364080CCFC2FEB3FE16F /* RUAttributesDictionaryBuilder.m in Sources */,
 				44382DF84561439610A03D07372CCF9F /* RUTextSize-dummy.m in Sources */,
+				D709B3801CBC1677007ADAB2 /* NSAttributedString+RUTextSizeStrings.m in Sources */,
 				CBF70488EFE62CDF079E48809392848C /* RUTextViewWithPlaceholderContainerView.m in Sources */,
 				1C4B541459414D186933F54CFED08981 /* UIButton+RUTextSize.m in Sources */,
 				DE6458971D0A5F0449857468A710427D /* UILabel+RUAttributesDictionaryBuilder.m in Sources */,
