@@ -122,6 +122,15 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 	[self setNeedsLayout];
 }
 
+-(void)setTextViewPlaceholderLabel_frame_offset:(UIOffset)textViewPlaceholderLabel_frame_offset
+{
+	kRUConditionalReturn(UIOffsetEqualToOffset(self.textViewPlaceholderLabel_frame_offset, textViewPlaceholderLabel_frame_offset), NO);
+
+	_textViewPlaceholderLabel_frame_offset = textViewPlaceholderLabel_frame_offset;
+
+	[self setNeedsLayout];
+}
+
 -(CGRect)textViewPlaceholderLabelFrame
 {
 	CGSize textSize = [self.textViewPlaceholderLabel ruTextSize];
@@ -130,8 +139,11 @@ static void* kRUTextViewWithPlaceholderContainerView__KVOContext = &kRUTextViewW
 					  CGRectGetVerticallyAlignedYCoordForHeightOnHeight(textSize.height, CGRectGetHeight(self.bounds)) :
 					  0.0f);
 
+	UIOffset textViewPlaceholderLabel_frame_offset = self.textViewPlaceholderLabel_frame_offset;
+
 	CGRect textViewPlaceholderLabelFrame_beforeInsets = (CGRect){
-		.origin.y		= yCoord,
+		.origin.x		= textViewPlaceholderLabel_frame_offset.horizontal,
+		.origin.y		= yCoord + textViewPlaceholderLabel_frame_offset.vertical,
 		.size.width		= CGRectGetWidth(self.bounds),
 		.size.height	= textSize.height,
 	};
