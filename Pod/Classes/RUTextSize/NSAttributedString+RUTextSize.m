@@ -9,6 +9,7 @@
 #import "NSAttributedString+RUTextSize.h"
 
 #import <ResplendentUtilities/RUConstants.h>
+#import <ResplendentUtilities/RUConditionalReturn.h>
 
 
 
@@ -44,6 +45,43 @@
 		return CGSizeZero;
 	}
 	
+}
+
+#pragma mark - Attributed String With
+-(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary<NSString *,id>*)attributesToAdd
+{
+	kRUConditionalReturn_ReturnValueNil(attributesToAdd == nil, YES);
+	kRUConditionalReturn_ReturnValueNil(attributesToAdd.count == 0, NO);
+
+	NSMutableAttributedString* mutableAttributedText = [NSMutableAttributedString new];
+	
+	[self enumerateAttributesInRange:NSMakeRange(0, self.length)
+							 options:(0)
+						  usingBlock:
+	 ^(NSDictionary<NSString *,id> * _Nonnull attributes_existing, NSRange range, BOOL * _Nonnull stop) {
+		 
+		 NSMutableDictionary* attributes_new = [NSMutableDictionary dictionary];
+		 BOOL attributes_existing_useOld = (attributes_existing != nil);
+		 if (attributes_existing_useOld)
+		 {
+			 [attributes_new addEntriesFromDictionary:attributes_existing];
+		 }
+
+		 [attributesToAdd enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+
+			 if ([attributes_new objectForKey:key] == nil)
+			 {
+				 [attributes_new setObject:obj forKey:key];
+			 }
+
+		 }];
+		 
+		 [mutableAttributedText appendAttributedString:[[NSAttributedString alloc]initWithString:[[self string]substringWithRange:range]
+																					  attributes:[attributes_new copy]]];
+		 
+	 }];
+
+	return [[NSAttributedString alloc]initWithAttributedString:mutableAttributedText];
 }
 
 #if DEBUG

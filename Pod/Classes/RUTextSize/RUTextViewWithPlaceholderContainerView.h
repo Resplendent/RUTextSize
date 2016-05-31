@@ -26,6 +26,12 @@
 #pragma mark - textViewPlaceholderLabel
 @property (nonatomic, readonly, nullable) UILabel* textViewPlaceholderLabel;
 @property (nonatomic, assign) UIEdgeInsets textViewPlaceholderLabelFrameInsets;
+
+/**
+ Used to offset textViewPlaceholderLabelFrame.
+ */
+@property (nonatomic, assign) UIOffset textViewPlaceholderLabel_frame_offset;
+
 /*
  Getter method `textViewPlaceholderLabelFrame`
   - takes up the entire width of the view, before insets. Makes it ideal for centering text with native `textAlignment` property

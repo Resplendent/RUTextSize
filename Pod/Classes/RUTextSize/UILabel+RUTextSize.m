@@ -13,6 +13,7 @@
 
 #if DEBUG
 #import "NSString+RUTextSizeStrings.h"
+#import "NSAttributedString+RUTextSizeStrings.h"
 #endif
 
 
@@ -27,7 +28,12 @@
 	if ([self respondsToSelector:@selector(attributedText)] &&
 		(self.attributedText.length))
 	{
-		return [self.attributedText ru_textSizeWithBoundingWidth:width];
+		RUAttributesDictionaryBuilder* attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
+		[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
+
+		NSAttributedString* attributedText_withAddedAttributesFromLabel = [self.attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder createAttributesDictionary]];
+
+		return [(attributedText_withAddedAttributesFromLabel ?: self.attributedText) ru_textSizeWithBoundingWidth:width];
 	}
 	else if (([self.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) &&
 		([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
@@ -63,6 +69,10 @@
 	
 	CGFloat const boundedWidth = 100.0f;
 
+	[debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
+
+	NSAttributedString* ru_exampleAttributedString_emojiWithNewlineAndLabelAbsorb = [NSAttributedString ru_exampleAttributedString_emojiWithNewlineAndLabelAbsorb];
+	[debugLabel setAttributedText:ru_exampleAttributedString_emojiWithNewlineAndLabelAbsorb];
 	[debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
 }
 #endif

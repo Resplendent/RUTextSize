@@ -16,7 +16,10 @@
 @interface NSAttributedString (RUTextSize)
 
 #pragma mark - Text Size
-- (CGSize)ru_textSizeWithBoundingWidth:(CGFloat)boundingWidth;
+-(CGSize)ru_textSizeWithBoundingWidth:(CGFloat)boundingWidth;
+
+#pragma mark - Attributed String With
+-(nullable NSAttributedString*)ru_attributedStringWithAttributesAppliedToBlankGaps:(nonnull NSDictionary<NSString *,id>*)attributesToAdd;
 
 #if DEBUG
 #pragma mark - Unit Testing

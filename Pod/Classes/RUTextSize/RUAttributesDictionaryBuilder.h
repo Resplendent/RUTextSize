@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 QudeLLC. All rights reserved.
 //
 
+#import "RUAttributesDictionaryBuilder_attributeTypes.h"
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -15,19 +17,30 @@
 
 @interface RUAttributesDictionaryBuilder : NSObject
 
-@property (nonatomic, strong) UIFont* font;
+#pragma mark - Properties
+@property (nonatomic, strong, nullable) UIFont* font;
 @property (nonatomic, assign) NSLineBreakMode lineBreakMode;
-@property (nonatomic, strong) NSNumber* lineSpacing;
-@property (nonatomic, strong) UIColor* textColor;
+@property (nonatomic, strong, nullable) NSNumber* lineSpacing;
+@property (nonatomic, strong, nullable) UIColor* textColor;
 @property (nonatomic, assign) BOOL textColorShouldUseCoreTextKey;
 @property (nonatomic, assign) NSTextAlignment textAlignment;
-@property (nonatomic, strong) NSNumber* kerning;
+@property (nonatomic, strong, nullable) NSNumber* kerning;
 
--(void)absorbPropertiesFromLabel:(UILabel*)label;
--(void)absorbPropertiesFromButton:(UIButton*)button;
--(void)absorbPropertiesFromTextField:(UITextField*)textField;
--(void)absorbPropertiesFromTextView:(UITextView*)textView;
+-(void)setProperty:(nullable id)propertyValue
+	 attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 
--(NSDictionary*)createAttributesDictionary;
+#pragma mark - Absorb
+-(void)absorbPropertiesFromLabel:(nonnull UILabel*)label;
+-(void)absorbPropertiesFromButton:(nonnull UIButton*)button;
+-(void)absorbPropertiesFromTextField:(nonnull UITextField*)textField;
+-(void)absorbPropertiesFromTextView:(nonnull UITextView*)textView;
+-(void)absorbPropertiesAttributesDictionary:(nonnull NSDictionary*)attributesDictionary
+						   ignoreNilEntries:(BOOL)ignoreNilEntries;
+
+#pragma mark - Create
+-(nullable NSDictionary*)createAttributesDictionary;
+
+#pragma mark - Attribute Type
++(nonnull NSString*)attributeTypeKeyForEnum:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 
 @end
