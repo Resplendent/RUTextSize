@@ -163,10 +163,13 @@
 			return (
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wpointer-bool-conversion"
-					(&kCTForegroundColorAttributeName != nil) ?
+					((&kCTForegroundColorAttributeName) != nil) ?
 #pragma clang diagnostic pop
 					(NSString *)kCTForegroundColorAttributeName :
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
 					[self attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_textColor]);
+#pragma clang diagnostic pop
 			break;
 
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
