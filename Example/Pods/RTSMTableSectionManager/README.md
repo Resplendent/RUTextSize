@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/RTSMTableSectionManager.svg?style=flat)](http://cocoapods.org/pods/RTSMTableSectionManager)
 [![Platform](https://img.shields.io/cocoapods/p/RTSMTableSectionManager.svg?style=flat)](http://cocoapods.org/pods/RTSMTableSectionManager)
 
-## Usage
+## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 

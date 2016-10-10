@@ -1,23 +1,11 @@
-source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-
-def import_pods
-	pod "RUTextSize", :path => "../"
+target 'RUTextSize_Example' do
+	pod 'RUTextSize', :path => '../'
 	
-	pod 'RTSMTableSectionManager', '0.1.2'
-end
-
-
-target 'RUTextSize_Example', :exclusive => true do
-  import_pods
-end
-
-target 'RUTextSize_Tests', :exclusive => true do
-  import_pods
-
-  pod 'Specta'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
+	target 'RUTextSize_Tests' do
+		inherit! :search_paths
+		
+		pod 'RTSMTableSectionManager', '0.1.8'
+	end
 end

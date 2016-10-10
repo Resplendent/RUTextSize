@@ -267,12 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Example" */;
 			buildPhases = (
-				A07B2629B889DCE80427D38B /* Check Pods Manifest.lock */,
+				A07B2629B889DCE80427D38B /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				FBDA27B1B147FF4F6B28C99F /* Embed Pods Frameworks */,
-				36B83C4D799FC7564E72B8E2 /* Copy Pods Resources */,
+				FBDA27B1B147FF4F6B28C99F /* [CP] Embed Pods Frameworks */,
+				36B83C4D799FC7564E72B8E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,12 +287,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Tests" */;
 			buildPhases = (
-				184DBEFCE5AA8D69F47DD406 /* Check Pods Manifest.lock */,
+				184DBEFCE5AA8D69F47DD406 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				8257BF2BEC9CC4E7F40C321F /* Embed Pods Frameworks */,
-				288ED09907D6631F6DD2C97B /* Copy Pods Resources */,
+				8257BF2BEC9CC4E7F40C321F /* [CP] Embed Pods Frameworks */,
+				288ED09907D6631F6DD2C97B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,29 +362,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		184DBEFCE5AA8D69F47DD406 /* Check Pods Manifest.lock */ = {
+		184DBEFCE5AA8D69F47DD406 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		288ED09907D6631F6DD2C97B /* Copy Pods Resources */ = {
+		288ED09907D6631F6DD2C97B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,14 +392,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		36B83C4D799FC7564E72B8E2 /* Copy Pods Resources */ = {
+		36B83C4D799FC7564E72B8E2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,14 +407,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8257BF2BEC9CC4E7F40C321F /* Embed Pods Frameworks */ = {
+		8257BF2BEC9CC4E7F40C321F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,29 +422,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A07B2629B889DCE80427D38B /* Check Pods Manifest.lock */ = {
+		A07B2629B889DCE80427D38B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FBDA27B1B147FF4F6B28C99F /* Embed Pods Frameworks */ = {
+		FBDA27B1B147FF4F6B28C99F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +630,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -655,7 +654,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
