@@ -1,11 +1,11 @@
 use_frameworks!
 
 target 'RUTextSize_Example' do
-  pod 'RUTextSize', :path => '../'
+	pod 'RUTextSize', :path => '../'
 
-  pod 'RTSMTableSectionManager', '0.1.8'
+	pod 'RTSMTableSectionManager', '0.1.8'
 
-  target 'RUTextSize_Tests' do
-    inherit! :search_paths
-  end
+	target 'RUTextSize_Tests' do
+		inherit! :search_paths
+	end
 end

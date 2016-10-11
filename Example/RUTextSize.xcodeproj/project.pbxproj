@@ -19,14 +19,14 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		9EF7FAAF8DD28D530BC0B089 /* Pods_RUTextSize_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D8738CF8DA3085DE55D4D /* Pods_RUTextSize_Tests.framework */; };
-		D71AFD781DAC612F00775150 /* NSNumber+RUExampleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD661DAC612F00775150 /* NSNumber+RUExampleConstants.m */; };
-		D71AFD791DAC612F00775150 /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD681DAC612F00775150 /* RUAppDelegate.m */; };
-		D71AFD7A1DAC612F00775150 /* RUNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD6B1DAC612F00775150 /* RUNavigationController.m */; };
-		D71AFD7B1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD6E1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m */; };
-		D71AFD7C1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD701DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m */; };
-		D71AFD7D1DAC612F00775150 /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD731DAC612F00775150 /* RUViewController.m */; };
-		D71AFD7E1DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD751DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */; };
-		D71AFD7F1DAC612F00775150 /* RUViewController_UILabel_TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD771DAC612F00775150 /* RUViewController_UILabel_TextSize.m */; };
+		D74AA1121DAC64DA00AD4784 /* NSNumber+RUExampleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA1001DAC64DA00AD4784 /* NSNumber+RUExampleConstants.m */; };
+		D74AA1131DAC64DA00AD4784 /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA1021DAC64DA00AD4784 /* RUAppDelegate.m */; };
+		D74AA1141DAC64DA00AD4784 /* RUNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA1051DAC64DA00AD4784 /* RUNavigationController.m */; };
+		D74AA1151DAC64DA00AD4784 /* RUGenericTableViewCell_CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA1081DAC64DA00AD4784 /* RUGenericTableViewCell_CustomView.m */; };
+		D74AA1161DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA10A1DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.m */; };
+		D74AA1171DAC64DA00AD4784 /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA10D1DAC64DA00AD4784 /* RUViewController.m */; };
+		D74AA1181DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA10F1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */; };
+		D74AA1191DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA1111DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m */; };
 		F2C7175A1843480AE49C24B5 /* Pods_RUTextSize_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B2313BFEE28BDABE7A5BA3 /* Pods_RUTextSize_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,22 +63,22 @@
 		6978ED8DAE4B618EB9EADD74 /* Pods-RUTextSize_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		90154E02C88B9CF6000F22F1 /* RUTextSize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RUTextSize.podspec; path = ../RUTextSize.podspec; sourceTree = "<group>"; };
 		95B2313BFEE28BDABE7A5BA3 /* Pods_RUTextSize_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D71AFD651DAC612F00775150 /* NSNumber+RUExampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RUExampleConstants.h"; sourceTree = "<group>"; };
-		D71AFD661DAC612F00775150 /* NSNumber+RUExampleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RUExampleConstants.m"; sourceTree = "<group>"; };
-		D71AFD671DAC612F00775150 /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
-		D71AFD681DAC612F00775150 /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
-		D71AFD6A1DAC612F00775150 /* RUNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUNavigationController.h; sourceTree = "<group>"; };
-		D71AFD6B1DAC612F00775150 /* RUNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUNavigationController.m; sourceTree = "<group>"; };
-		D71AFD6D1DAC612F00775150 /* RUGenericTableViewCell_CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUGenericTableViewCell_CustomView.h; sourceTree = "<group>"; };
-		D71AFD6E1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUGenericTableViewCell_CustomView.m; sourceTree = "<group>"; };
-		D71AFD6F1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUTableViewCell_LabelSizedToText.h; sourceTree = "<group>"; };
-		D71AFD701DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUTableViewCell_LabelSizedToText.m; sourceTree = "<group>"; };
-		D71AFD721DAC612F00775150 /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
-		D71AFD731DAC612F00775150 /* RUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
-		D71AFD741DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_RUTextViewWithPlaceholderContainerView.h; sourceTree = "<group>"; };
-		D71AFD751DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_RUTextViewWithPlaceholderContainerView.m; sourceTree = "<group>"; };
-		D71AFD761DAC612F00775150 /* RUViewController_UILabel_TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_UILabel_TextSize.h; sourceTree = "<group>"; };
-		D71AFD771DAC612F00775150 /* RUViewController_UILabel_TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_UILabel_TextSize.m; sourceTree = "<group>"; };
+		D74AA0FF1DAC64DA00AD4784 /* NSNumber+RUExampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RUExampleConstants.h"; sourceTree = "<group>"; };
+		D74AA1001DAC64DA00AD4784 /* NSNumber+RUExampleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RUExampleConstants.m"; sourceTree = "<group>"; };
+		D74AA1011DAC64DA00AD4784 /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
+		D74AA1021DAC64DA00AD4784 /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
+		D74AA1041DAC64DA00AD4784 /* RUNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUNavigationController.h; sourceTree = "<group>"; };
+		D74AA1051DAC64DA00AD4784 /* RUNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUNavigationController.m; sourceTree = "<group>"; };
+		D74AA1071DAC64DA00AD4784 /* RUGenericTableViewCell_CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUGenericTableViewCell_CustomView.h; sourceTree = "<group>"; };
+		D74AA1081DAC64DA00AD4784 /* RUGenericTableViewCell_CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUGenericTableViewCell_CustomView.m; sourceTree = "<group>"; };
+		D74AA1091DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUTableViewCell_LabelSizedToText.h; sourceTree = "<group>"; };
+		D74AA10A1DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUTableViewCell_LabelSizedToText.m; sourceTree = "<group>"; };
+		D74AA10C1DAC64DA00AD4784 /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
+		D74AA10D1DAC64DA00AD4784 /* RUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
+		D74AA10E1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_RUTextViewWithPlaceholderContainerView.h; sourceTree = "<group>"; };
+		D74AA10F1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_RUTextViewWithPlaceholderContainerView.m; sourceTree = "<group>"; };
+		D74AA1101DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_UILabel_TextSize.h; sourceTree = "<group>"; };
+		D74AA1111DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_UILabel_TextSize.m; sourceTree = "<group>"; };
 		DD04A70028BA6B202AEB257A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FFBAFB66FDFEEA24B10F406A /* Pods-RUTextSize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +157,7 @@
 		6003F593195388D20070C39A /* Example for RUTextSize */ = {
 			isa = PBXGroup;
 			children = (
-				D71AFD631DAC612F00775150 /* Code */,
+				D74AA0FD1DAC64DA00AD4784 /* Code */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -205,57 +205,57 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		D71AFD631DAC612F00775150 /* Code */ = {
+		D74AA0FD1DAC64DA00AD4784 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				D71AFD641DAC612F00775150 /* Categories */,
-				D71AFD671DAC612F00775150 /* RUAppDelegate.h */,
-				D71AFD681DAC612F00775150 /* RUAppDelegate.m */,
-				D71AFD691DAC612F00775150 /* UINavigationController */,
-				D71AFD6C1DAC612F00775150 /* UITableViewCell */,
-				D71AFD711DAC612F00775150 /* UIViewController */,
+				D74AA0FE1DAC64DA00AD4784 /* Categories */,
+				D74AA1011DAC64DA00AD4784 /* RUAppDelegate.h */,
+				D74AA1021DAC64DA00AD4784 /* RUAppDelegate.m */,
+				D74AA1031DAC64DA00AD4784 /* UINavigationController */,
+				D74AA1061DAC64DA00AD4784 /* UITableViewCell */,
+				D74AA10B1DAC64DA00AD4784 /* UIViewController */,
 			);
 			path = Code;
 			sourceTree = "<group>";
 		};
-		D71AFD641DAC612F00775150 /* Categories */ = {
+		D74AA0FE1DAC64DA00AD4784 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				D71AFD651DAC612F00775150 /* NSNumber+RUExampleConstants.h */,
-				D71AFD661DAC612F00775150 /* NSNumber+RUExampleConstants.m */,
+				D74AA0FF1DAC64DA00AD4784 /* NSNumber+RUExampleConstants.h */,
+				D74AA1001DAC64DA00AD4784 /* NSNumber+RUExampleConstants.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		D71AFD691DAC612F00775150 /* UINavigationController */ = {
+		D74AA1031DAC64DA00AD4784 /* UINavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				D71AFD6A1DAC612F00775150 /* RUNavigationController.h */,
-				D71AFD6B1DAC612F00775150 /* RUNavigationController.m */,
+				D74AA1041DAC64DA00AD4784 /* RUNavigationController.h */,
+				D74AA1051DAC64DA00AD4784 /* RUNavigationController.m */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
-		D71AFD6C1DAC612F00775150 /* UITableViewCell */ = {
+		D74AA1061DAC64DA00AD4784 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				D71AFD6D1DAC612F00775150 /* RUGenericTableViewCell_CustomView.h */,
-				D71AFD6E1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m */,
-				D71AFD6F1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.h */,
-				D71AFD701DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m */,
+				D74AA1071DAC64DA00AD4784 /* RUGenericTableViewCell_CustomView.h */,
+				D74AA1081DAC64DA00AD4784 /* RUGenericTableViewCell_CustomView.m */,
+				D74AA1091DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.h */,
+				D74AA10A1DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.m */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
-		D71AFD711DAC612F00775150 /* UIViewController */ = {
+		D74AA10B1DAC64DA00AD4784 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D71AFD721DAC612F00775150 /* RUViewController.h */,
-				D71AFD731DAC612F00775150 /* RUViewController.m */,
-				D71AFD741DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */,
-				D71AFD751DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */,
-				D71AFD761DAC612F00775150 /* RUViewController_UILabel_TextSize.h */,
-				D71AFD771DAC612F00775150 /* RUViewController_UILabel_TextSize.m */,
+				D74AA10C1DAC64DA00AD4784 /* RUViewController.h */,
+				D74AA10D1DAC64DA00AD4784 /* RUViewController.m */,
+				D74AA10E1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */,
+				D74AA10F1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */,
+				D74AA1101DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.h */,
+				D74AA1111DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -460,14 +460,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				D71AFD7D1DAC612F00775150 /* RUViewController.m in Sources */,
-				D71AFD781DAC612F00775150 /* NSNumber+RUExampleConstants.m in Sources */,
-				D71AFD7A1DAC612F00775150 /* RUNavigationController.m in Sources */,
-				D71AFD7C1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m in Sources */,
-				D71AFD7F1DAC612F00775150 /* RUViewController_UILabel_TextSize.m in Sources */,
-				D71AFD7E1DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */,
-				D71AFD791DAC612F00775150 /* RUAppDelegate.m in Sources */,
-				D71AFD7B1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m in Sources */,
+				D74AA1171DAC64DA00AD4784 /* RUViewController.m in Sources */,
+				D74AA1121DAC64DA00AD4784 /* NSNumber+RUExampleConstants.m in Sources */,
+				D74AA1141DAC64DA00AD4784 /* RUNavigationController.m in Sources */,
+				D74AA1161DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.m in Sources */,
+				D74AA1191DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m in Sources */,
+				D74AA1181DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */,
+				D74AA1131DAC64DA00AD4784 /* RUAppDelegate.m in Sources */,
+				D74AA1151DAC64DA00AD4784 /* RUGenericTableViewCell_CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -585,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

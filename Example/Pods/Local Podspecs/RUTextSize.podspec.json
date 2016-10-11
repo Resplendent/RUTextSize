@@ -1,9 +1,13 @@
 {
   "name": "RUTextSize",
   "version": "0.1.11",
-  "summary": "Helpers for getting size of common UI components.",
+  "summary": "Helpers for getting size of common text-related UI components.",
+  "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Resplendent/RUTextSize",
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
   "authors": {
     "Benjamin Maer": "ben@resplendent.co",
     "Lee Pollard": "tjdet11@gmail.com"
@@ -16,12 +20,7 @@
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "RUTextSize": [
-      "Pod/Assets/*.png"
-    ]
-  },
+  "source_files": "RUTextSize/Classes/**/*",
   "dependencies": {
     "ResplendentUtilities": [
       "~> 0.5.0"
