@@ -73,6 +73,13 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 
 @implementation RUViewController_UILabel_TextSize
 
+#pragma mark - NSObject
+-(void)dealloc
+{
+	[self.tableView setDelegate:nil];
+	[self.tableView setDataSource:nil];
+}
+
 #pragma mark - UIViewController
 - (void)viewDidLoad
 {

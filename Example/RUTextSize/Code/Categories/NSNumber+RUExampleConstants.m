@@ -9,7 +9,6 @@
 #import "NSNumber+RUExampleConstants.h"
 
 #import <ResplendentUtilities/RUConditionalReturn.h>
-#import <ResplendentUtilities/RUDLog.h>
 
 
 
@@ -28,8 +27,6 @@
 		NSUInteger const maximum = 12.0f;
 		ru_padding_general = [self ru_randomNumber_withMinimum:minimum
 													   maximum:maximum];
-
-		RUDLog(@"ru_padding_general: %f",ru_padding_general);
 	});
 	
 	return ru_padding_general;

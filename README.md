@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/RUTextSize.svg?style=flat)](http://cocoapods.org/pods/RUTextSize)
 [![Platform](https://img.shields.io/cocoapods/p/RUTextSize.svg?style=flat)](http://cocoapods.org/pods/RUTextSize)
 
-## Usage
+## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 

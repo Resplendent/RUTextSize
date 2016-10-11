@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "UITableView+RTSMEmptySpace.h"
 #import "RTSMTableSectionManager.h"
 #import "RTSMTableSectionManagerProtocols.h"
 #import "RTSMTableSectionRangeManager.h"

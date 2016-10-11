@@ -13,6 +13,4 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
-
-	#define NSString_RUTextSizeStrings__Enable_DEBUG_Code 1
 #endif
