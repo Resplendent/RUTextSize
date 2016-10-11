@@ -18,16 +18,16 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		D7A14DA31C8A15E600953808 /* RUNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DA21C8A15E600953808 /* RUNavigationController.m */; };
-		D7A14DA61C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DA51C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */; };
-		D7A14DA91C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DA81C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m */; };
-		D7A14DAC1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DAB1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m */; };
-		D7A14DB01C8A29EA00953808 /* NSNumber+RUExampleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A14DAF1C8A29EA00953808 /* NSNumber+RUExampleConstants.m */; };
-		D7D6399B1C879EA600DD74B4 /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D639961C879EA600DD74B4 /* RUAppDelegate.m */; };
-		D7D6399C1C879EA600DD74B4 /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6399A1C879EA600DD74B4 /* RUViewController.m */; };
-		D7D6399F1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6399E1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m */; };
-		DD43900127EE6ED7D7AAF701 /* Pods_RUTextSize_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */; };
-		FBA28C6BE1EAC3A87CAFD4B1 /* Pods_RUTextSize_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */; };
+		9EF7FAAF8DD28D530BC0B089 /* Pods_RUTextSize_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D8738CF8DA3085DE55D4D /* Pods_RUTextSize_Tests.framework */; };
+		D71AFD781DAC612F00775150 /* NSNumber+RUExampleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD661DAC612F00775150 /* NSNumber+RUExampleConstants.m */; };
+		D71AFD791DAC612F00775150 /* RUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD681DAC612F00775150 /* RUAppDelegate.m */; };
+		D71AFD7A1DAC612F00775150 /* RUNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD6B1DAC612F00775150 /* RUNavigationController.m */; };
+		D71AFD7B1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD6E1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m */; };
+		D71AFD7C1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD701DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m */; };
+		D71AFD7D1DAC612F00775150 /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD731DAC612F00775150 /* RUViewController.m */; };
+		D71AFD7E1DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD751DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */; };
+		D71AFD7F1DAC612F00775150 /* RUViewController_UILabel_TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D71AFD771DAC612F00775150 /* RUViewController_UILabel_TextSize.m */; };
+		F2C7175A1843480AE49C24B5 /* Pods_RUTextSize_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B2313BFEE28BDABE7A5BA3 /* Pods_RUTextSize_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0359164FA691DE1A5E1A845C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		157F17378ED151648C78379F /* Pods-RUTextSize_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		544E7D3949A83CE85A7E3E97 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		088DD922AB0DC5EA5373D7AF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4017A44D1774B5B59F2C8307 /* Pods-RUTextSize_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4F1D8738CF8DA3085DE55D4D /* Pods_RUTextSize_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		586FF504B133CDB1BD601617 /* Pods-RUTextSize_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* RUTextSize_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUTextSize_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,28 +60,27 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D7A14DA11C8A15E600953808 /* RUNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUNavigationController.h; sourceTree = "<group>"; };
-		D7A14DA21C8A15E600953808 /* RUNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUNavigationController.m; sourceTree = "<group>"; };
-		D7A14DA41C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_RUTextViewWithPlaceholderContainerView.h; sourceTree = "<group>"; };
-		D7A14DA51C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_RUTextViewWithPlaceholderContainerView.m; sourceTree = "<group>"; };
-		D7A14DA71C8A1F4E00953808 /* RUViewController_UILabel_TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_UILabel_TextSize.h; sourceTree = "<group>"; };
-		D7A14DA81C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_UILabel_TextSize.m; sourceTree = "<group>"; };
-		D7A14DAA1C8A217600953808 /* RUTableViewCell_LabelSizedToText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUTableViewCell_LabelSizedToText.h; sourceTree = "<group>"; };
-		D7A14DAB1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUTableViewCell_LabelSizedToText.m; sourceTree = "<group>"; };
-		D7A14DAE1C8A29EA00953808 /* NSNumber+RUExampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RUExampleConstants.h"; sourceTree = "<group>"; };
-		D7A14DAF1C8A29EA00953808 /* NSNumber+RUExampleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RUExampleConstants.m"; sourceTree = "<group>"; };
-		D7D639951C879EA600DD74B4 /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
-		D7D639961C879EA600DD74B4 /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
-		D7D639991C879EA600DD74B4 /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
-		D7D6399A1C879EA600DD74B4 /* RUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
-		D7D6399D1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUGenericTableViewCell_CustomView.h; sourceTree = "<group>"; };
-		D7D6399E1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUGenericTableViewCell_CustomView.m; sourceTree = "<group>"; };
-		DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFAD8BE8E80A09344DE754CF /* RUTextSize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RUTextSize.podspec; path = ../RUTextSize.podspec; sourceTree = "<group>"; };
-		F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FE9A67F508748503B3D1A14A /* Pods-RUTextSize_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6978ED8DAE4B618EB9EADD74 /* Pods-RUTextSize_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		90154E02C88B9CF6000F22F1 /* RUTextSize.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RUTextSize.podspec; path = ../RUTextSize.podspec; sourceTree = "<group>"; };
+		95B2313BFEE28BDABE7A5BA3 /* Pods_RUTextSize_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RUTextSize_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71AFD651DAC612F00775150 /* NSNumber+RUExampleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RUExampleConstants.h"; sourceTree = "<group>"; };
+		D71AFD661DAC612F00775150 /* NSNumber+RUExampleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RUExampleConstants.m"; sourceTree = "<group>"; };
+		D71AFD671DAC612F00775150 /* RUAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUAppDelegate.h; sourceTree = "<group>"; };
+		D71AFD681DAC612F00775150 /* RUAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUAppDelegate.m; sourceTree = "<group>"; };
+		D71AFD6A1DAC612F00775150 /* RUNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUNavigationController.h; sourceTree = "<group>"; };
+		D71AFD6B1DAC612F00775150 /* RUNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUNavigationController.m; sourceTree = "<group>"; };
+		D71AFD6D1DAC612F00775150 /* RUGenericTableViewCell_CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUGenericTableViewCell_CustomView.h; sourceTree = "<group>"; };
+		D71AFD6E1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUGenericTableViewCell_CustomView.m; sourceTree = "<group>"; };
+		D71AFD6F1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUTableViewCell_LabelSizedToText.h; sourceTree = "<group>"; };
+		D71AFD701DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUTableViewCell_LabelSizedToText.m; sourceTree = "<group>"; };
+		D71AFD721DAC612F00775150 /* RUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController.h; sourceTree = "<group>"; };
+		D71AFD731DAC612F00775150 /* RUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController.m; sourceTree = "<group>"; };
+		D71AFD741DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_RUTextViewWithPlaceholderContainerView.h; sourceTree = "<group>"; };
+		D71AFD751DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_RUTextViewWithPlaceholderContainerView.m; sourceTree = "<group>"; };
+		D71AFD761DAC612F00775150 /* RUViewController_UILabel_TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_UILabel_TextSize.h; sourceTree = "<group>"; };
+		D71AFD771DAC612F00775150 /* RUViewController_UILabel_TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_UILabel_TextSize.m; sourceTree = "<group>"; };
+		DD04A70028BA6B202AEB257A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FFBAFB66FDFEEA24B10F406A /* Pods-RUTextSize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				FBA28C6BE1EAC3A87CAFD4B1 /* Pods_RUTextSize_Example.framework in Frameworks */,
+				F2C7175A1843480AE49C24B5 /* Pods_RUTextSize_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,13 +102,24 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				DD43900127EE6ED7D7AAF701 /* Pods_RUTextSize_Tests.framework in Frameworks */,
+				9EF7FAAF8DD28D530BC0B089 /* Pods_RUTextSize_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19E12127B5E055DF62346894 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				586FF504B133CDB1BD601617 /* Pods-RUTextSize_Example.debug.xcconfig */,
+				4017A44D1774B5B59F2C8307 /* Pods-RUTextSize_Example.release.xcconfig */,
+				FFBAFB66FDFEEA24B10F406A /* Pods-RUTextSize_Tests.debug.xcconfig */,
+				6978ED8DAE4B618EB9EADD74 /* Pods-RUTextSize_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +128,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				E8FF617B39204091F33F6A37 /* Pods */,
+				19E12127B5E055DF62346894 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,8 +148,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				93701CF93BD82DF6E33CAF66 /* Pods_RUTextSize_Example.framework */,
-				DCE1BA59BB73B0E78318A0F2 /* Pods_RUTextSize_Tests.framework */,
+				95B2313BFEE28BDABE7A5BA3 /* Pods_RUTextSize_Example.framework */,
+				4F1D8738CF8DA3085DE55D4D /* Pods_RUTextSize_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,7 +157,7 @@
 		6003F593195388D20070C39A /* Example for RUTextSize */ = {
 			isa = PBXGroup;
 			children = (
-				D7D639941C879EA600DD74B4 /* Code */,
+				D71AFD631DAC612F00775150 /* Code */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -187,77 +198,66 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				EFAD8BE8E80A09344DE754CF /* RUTextSize.podspec */,
-				0359164FA691DE1A5E1A845C /* README.md */,
-				544E7D3949A83CE85A7E3E97 /* LICENSE */,
+				90154E02C88B9CF6000F22F1 /* RUTextSize.podspec */,
+				088DD922AB0DC5EA5373D7AF /* README.md */,
+				DD04A70028BA6B202AEB257A /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		D7A14DA01C8A15CB00953808 /* UINavigationController */ = {
+		D71AFD631DAC612F00775150 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				D7A14DA11C8A15E600953808 /* RUNavigationController.h */,
-				D7A14DA21C8A15E600953808 /* RUNavigationController.m */,
-			);
-			path = UINavigationController;
-			sourceTree = "<group>";
-		};
-		D7A14DAD1C8A29D200953808 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				D7A14DAE1C8A29EA00953808 /* NSNumber+RUExampleConstants.h */,
-				D7A14DAF1C8A29EA00953808 /* NSNumber+RUExampleConstants.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		D7D639941C879EA600DD74B4 /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				D7A14DAD1C8A29D200953808 /* Categories */,
-				D7D639951C879EA600DD74B4 /* RUAppDelegate.h */,
-				D7D639961C879EA600DD74B4 /* RUAppDelegate.m */,
-				D7A14DA01C8A15CB00953808 /* UINavigationController */,
-				D7D639971C879EA600DD74B4 /* UITableViewCell */,
-				D7D639981C879EA600DD74B4 /* UIViewController */,
+				D71AFD641DAC612F00775150 /* Categories */,
+				D71AFD671DAC612F00775150 /* RUAppDelegate.h */,
+				D71AFD681DAC612F00775150 /* RUAppDelegate.m */,
+				D71AFD691DAC612F00775150 /* UINavigationController */,
+				D71AFD6C1DAC612F00775150 /* UITableViewCell */,
+				D71AFD711DAC612F00775150 /* UIViewController */,
 			);
 			path = Code;
 			sourceTree = "<group>";
 		};
-		D7D639971C879EA600DD74B4 /* UITableViewCell */ = {
+		D71AFD641DAC612F00775150 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				D7D6399D1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.h */,
-				D7D6399E1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m */,
-				D7A14DAA1C8A217600953808 /* RUTableViewCell_LabelSizedToText.h */,
-				D7A14DAB1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m */,
+				D71AFD651DAC612F00775150 /* NSNumber+RUExampleConstants.h */,
+				D71AFD661DAC612F00775150 /* NSNumber+RUExampleConstants.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		D71AFD691DAC612F00775150 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				D71AFD6A1DAC612F00775150 /* RUNavigationController.h */,
+				D71AFD6B1DAC612F00775150 /* RUNavigationController.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		D71AFD6C1DAC612F00775150 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D71AFD6D1DAC612F00775150 /* RUGenericTableViewCell_CustomView.h */,
+				D71AFD6E1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m */,
+				D71AFD6F1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.h */,
+				D71AFD701DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
-		D7D639981C879EA600DD74B4 /* UIViewController */ = {
+		D71AFD711DAC612F00775150 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D7A14DA41C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */,
-				D7A14DA51C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */,
-				D7A14DA71C8A1F4E00953808 /* RUViewController_UILabel_TextSize.h */,
-				D7A14DA81C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m */,
-				D7D639991C879EA600DD74B4 /* RUViewController.h */,
-				D7D6399A1C879EA600DD74B4 /* RUViewController.m */,
+				D71AFD721DAC612F00775150 /* RUViewController.h */,
+				D71AFD731DAC612F00775150 /* RUViewController.m */,
+				D71AFD741DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */,
+				D71AFD751DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */,
+				D71AFD761DAC612F00775150 /* RUViewController_UILabel_TextSize.h */,
+				D71AFD771DAC612F00775150 /* RUViewController_UILabel_TextSize.m */,
 			);
 			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		E8FF617B39204091F33F6A37 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				157F17378ED151648C78379F /* Pods-RUTextSize_Example.debug.xcconfig */,
-				FE9A67F508748503B3D1A14A /* Pods-RUTextSize_Example.release.xcconfig */,
-				F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */,
-				B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,12 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Example" */;
 			buildPhases = (
-				A07B2629B889DCE80427D38B /* [CP] Check Pods Manifest.lock */,
+				7F4CA362B36DC9090505DE00 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				FBDA27B1B147FF4F6B28C99F /* [CP] Embed Pods Frameworks */,
-				36B83C4D799FC7564E72B8E2 /* [CP] Copy Pods Resources */,
+				1AE2DA1673A3432A4C92D6ED /* [CP] Embed Pods Frameworks */,
+				8F4E3FBF759711FA0CAD9E4B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,12 +287,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "RUTextSize_Tests" */;
 			buildPhases = (
-				184DBEFCE5AA8D69F47DD406 /* [CP] Check Pods Manifest.lock */,
+				246487AF7E0594791C3828A6 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				8257BF2BEC9CC4E7F40C321F /* [CP] Embed Pods Frameworks */,
-				288ED09907D6631F6DD2C97B /* [CP] Copy Pods Resources */,
+				2DF645DC901019BB041CF4B9 /* [CP] Embed Pods Frameworks */,
+				7A714227E7D3448F3062D4D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,82 +362,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		184DBEFCE5AA8D69F47DD406 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		288ED09907D6631F6DD2C97B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		36B83C4D799FC7564E72B8E2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8257BF2BEC9CC4E7F40C321F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A07B2629B889DCE80427D38B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FBDA27B1B147FF4F6B28C99F /* [CP] Embed Pods Frameworks */ = {
+		1AE2DA1673A3432A4C92D6ED /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -452,6 +377,81 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		246487AF7E0594791C3828A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2DF645DC901019BB041CF4B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A714227E7D3448F3062D4D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F4CA362B36DC9090505DE00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4E3FBF759711FA0CAD9E4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RUTextSize_Example/Pods-RUTextSize_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -459,15 +459,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A14DAC1C8A217600953808 /* RUTableViewCell_LabelSizedToText.m in Sources */,
-				D7A14DB01C8A29EA00953808 /* NSNumber+RUExampleConstants.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				D7A14DA61C8A168700953808 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */,
-				D7D6399C1C879EA600DD74B4 /* RUViewController.m in Sources */,
-				D7A14DA91C8A1F4E00953808 /* RUViewController_UILabel_TextSize.m in Sources */,
-				D7D6399F1C879ED300DD74B4 /* RUGenericTableViewCell_CustomView.m in Sources */,
-				D7D6399B1C879EA600DD74B4 /* RUAppDelegate.m in Sources */,
-				D7A14DA31C8A15E600953808 /* RUNavigationController.m in Sources */,
+				D71AFD7D1DAC612F00775150 /* RUViewController.m in Sources */,
+				D71AFD781DAC612F00775150 /* NSNumber+RUExampleConstants.m in Sources */,
+				D71AFD7A1DAC612F00775150 /* RUNavigationController.m in Sources */,
+				D71AFD7C1DAC612F00775150 /* RUTableViewCell_LabelSizedToText.m in Sources */,
+				D71AFD7F1DAC612F00775150 /* RUViewController_UILabel_TextSize.m in Sources */,
+				D71AFD7E1DAC612F00775150 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */,
+				D71AFD791DAC612F00775150 /* RUAppDelegate.m in Sources */,
+				D71AFD7B1DAC612F00775150 /* RUGenericTableViewCell_CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +594,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 157F17378ED151648C78379F /* Pods-RUTextSize_Example.debug.xcconfig */;
+			baseConfigurationReference = 586FF504B133CDB1BD601617 /* Pods-RUTextSize_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -611,7 +611,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE9A67F508748503B3D1A14A /* Pods-RUTextSize_Example.release.xcconfig */;
+			baseConfigurationReference = 4017A44D1774B5B59F2C8307 /* Pods-RUTextSize_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -628,7 +628,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9B4D7A54F2F40E7A14B951F /* Pods-RUTextSize_Tests.debug.xcconfig */;
+			baseConfigurationReference = FFBAFB66FDFEEA24B10F406A /* Pods-RUTextSize_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -652,7 +652,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2EAF4CFB538D7068DF91F6B /* Pods-RUTextSize_Tests.release.xcconfig */;
+			baseConfigurationReference = 6978ED8DAE4B618EB9EADD74 /* Pods-RUTextSize_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
