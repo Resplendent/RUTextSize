@@ -137,10 +137,14 @@
 {
 	if (CGRectGetWidth(textBoundingRect) <= boundingSize.width)
 	{
-		CGRect textRect_withoutBounding = [self boundingRectWithSize:CGSizeZero options:options context:nil];
+		CGRect const textRect_withoutBounding = [self boundingRectWithSize:CGSizeZero options:options context:nil];
 		if (CGRectGetWidth(textRect_withoutBounding) > CGRectGetWidth(textBoundingRect))
 		{
-			if (CGRectGetHeight(textBoundingRect) <= CGRectGetHeight(textRect_withoutBounding))
+			/**
+			 We need `horizontalTolerance` because sometimes `boundingRectWithSize:options:context:` returns a different size.width based on the constraint.
+			 */
+			CGFloat const horizontalTolerance = 0.0001f;
+			if (CGRectGetHeight(textBoundingRect) + horizontalTolerance <= CGRectGetHeight(textRect_withoutBounding))
 			{
 				return RUStringWithFormat(@"attributed string %@ had bounding width %f, which produced a textBoundingRect %@ which was bounded, yet textRect_withoutBounding %@ had the same height. It should be taller.",self,boundingSize.width,NSStringFromCGRect(textBoundingRect),NSStringFromCGRect(textRect_withoutBounding));
 			}
