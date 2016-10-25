@@ -25,30 +25,94 @@
 #pragma mark - Text Size
 -(CGSize)ruTextSizeConstrainedToWidth:(CGFloat)width
 {
-	if ([self respondsToSelector:@selector(attributedText)] &&
-		(self.attributedText.length))
-	{
-		RUAttributesDictionaryBuilder* attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
-		[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
+	CGSize(^actions)(void (^ _Nullable attributesDictionaryBuilderBlock)(RUAttributesDictionaryBuilder* _Nonnull attributesDictionaryBuilder),
+					  NSAttributedString* _Nullable  (^ _Nullable attributedStringBlock)(NSAttributedString* _Nonnull attributedString)) =
+	^(void(^ _Nullable attributesDictionaryBuilderBlock)(RUAttributesDictionaryBuilder* _Nonnull attributesDictionaryBuilder),
+	  NSAttributedString* _Nullable  (^ _Nullable attributedStringBlock)(NSAttributedString* _Nonnull attributedString)) {
+		if ([self respondsToSelector:@selector(attributedText)] &&
+			(self.attributedText.length))
+		{
+			RUAttributesDictionaryBuilder* const attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
+			[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
 
-		NSAttributedString* attributedText_withAddedAttributesFromLabel = [self.attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder createAttributesDictionary]];
+			if (attributesDictionaryBuilderBlock)
+			{
+				attributesDictionaryBuilderBlock(attributesDictionaryBuilder);
+			}
 
-		return [(attributedText_withAddedAttributesFromLabel ?: self.attributedText) ru_textSizeWithBoundingWidth:width];
-	}
-	else if (([self.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) &&
-		([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
-	{
-		RUAttributesDictionaryBuilder* attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
-		[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
-		return [self.text ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder createAttributesDictionary]];
-	}
-	else
-	{
+			NSAttributedString* const attributedText = self.attributedText;
+			NSAttributedString* const attributedText_withAddedAttributesFromLabel = [attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder createAttributesDictionary]];
+			NSAttributedString* const attributedString_toUse = (attributedText_withAddedAttributesFromLabel ?: attributedText);
+			NSAttributedString* const attributedString_final =
+			(attributedStringBlock ?
+			 attributedStringBlock(attributedString_toUse) :
+			 attributedString_toUse);
+
+			return [attributedString_final ru_textSizeWithBoundingWidth:width];
+		}
+		else if (([self.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) &&
+				 ([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
+		{
+			RUAttributesDictionaryBuilder* const attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
+			[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
+
+			if (attributesDictionaryBuilderBlock)
+			{
+				attributesDictionaryBuilderBlock(attributesDictionaryBuilder);
+			}
+
+			return [self.text ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder createAttributesDictionary]];
+		}
+		else
+		{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-		return [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(width, CGFLOAT_MAX) lineBreakMode:self.lineBreakMode];
+			return [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(width, CGFLOAT_MAX) lineBreakMode:self.lineBreakMode];
 #pragma clang diagnostic pop
+		}
+	};
+
+	/**
+	 The following code attempts to update attributes necessary to deal with the issue where lineBreakMode `NSLineBreakByTruncatingTail` won't give multiline height.
+	 */
+	NSLineBreakMode const lineBreakMode_old = self.lineBreakMode;
+	BOOL const lineBreakMode_needsSwap = (lineBreakMode_old == NSLineBreakByTruncatingTail);
+	if (lineBreakMode_needsSwap)
+	{
+		NSLineBreakMode const lineBreakMode_replacement = NSLineBreakByCharWrapping;
+		return actions(^(RUAttributesDictionaryBuilder* _Nonnull attributesDictionaryBuilder){
+			
+			[attributesDictionaryBuilder setLineBreakMode:lineBreakMode_replacement];
+			
+		}, ^NSAttributedString* _Nullable(NSAttributedString* _Nonnull attributedString){
+			
+			NSMutableAttributedString* const mutableAttributedString = [NSMutableAttributedString new];
+			NSString* const attributeName_paragraphStyle = [RUAttributesDictionaryBuilder attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_paragraphStyle];
+			
+			[attributedString enumerateAttributesInRange:NSMakeRange(0, attributedString.length)
+												 options:(0)
+											  usingBlock:
+			 ^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+				 
+				 NSMutableDictionary<NSString*,id>* const attrs_new = [NSMutableDictionary<NSString*,id> dictionaryWithDictionary:attrs];
+				 
+				 NSParagraphStyle* const paragraphStyle = [attrs objectForKey:attributeName_paragraphStyle];
+				 NSMutableParagraphStyle* const paragraphStyle_new = [paragraphStyle mutableCopy];
+				 [paragraphStyle_new setLineBreakMode:lineBreakMode_replacement];
+
+				 [attrs_new setObject:paragraphStyle_new forKey:attributeName_paragraphStyle];
+
+				 [mutableAttributedString appendAttributedString:
+				  [[NSAttributedString alloc]initWithString:[[attributedString attributedSubstringFromRange:range]string]
+												 attributes:[NSDictionary<NSString *,id> dictionaryWithDictionary:attrs_new]]];
+
+			 }];
+
+			return [[NSAttributedString alloc]initWithAttributedString:mutableAttributedString];
+		});
 	}
+
+	return actions(nil,nil);
 }
 
 -(CGSize)ruTextSize
