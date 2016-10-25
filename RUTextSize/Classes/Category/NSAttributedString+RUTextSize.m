@@ -7,6 +7,7 @@
 //
 
 #import "NSAttributedString+RUTextSize.h"
+#import "RUAttributesDictionaryBuilder.h"
 
 #import <ResplendentUtilities/RUConstants.h>
 #import <ResplendentUtilities/RUConditionalReturn.h>
@@ -27,8 +28,36 @@
 			.height		= CGFLOAT_MAX,
 		};
 		
-		NSStringDrawingOptions options = (NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine);
-		CGRect textBoundingRect = [self boundingRectWithSize:boundingSize options:options context:nil];
+		__block NSStringDrawingOptions options = (NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading);
+		NSString* const attributeName_paragraphStyle = [RUAttributesDictionaryBuilder attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_paragraphStyle];
+
+		[self enumerateAttributesInRange:NSMakeRange(0, self.length)
+								 options:0
+							  usingBlock:
+		 ^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+
+			 NSParagraphStyle* const paragraphStyle = [attrs objectForKey:attributeName_paragraphStyle];
+
+			 if (paragraphStyle)
+			 {
+				 switch (paragraphStyle.lineBreakMode)
+				 {
+					 case NSLineBreakByWordWrapping:
+					 case NSLineBreakByCharWrapping:
+					 {
+						 options |= (NSStringDrawingTruncatesLastVisibleLine);
+						 *stop = YES;
+						 
+					 }
+						 break;
+						 
+					 default:
+						 break;
+				 }
+			 }
+
+		 }];
+		CGRect const textBoundingRect = [self boundingRectWithSize:boundingSize options:options context:nil];
 		
 		NSAssert([self DEBUG__NSAttributedString_RUTextSize_unitTest_withBoundingSize:boundingSize
 																	 textBoundingRect:textBoundingRect
