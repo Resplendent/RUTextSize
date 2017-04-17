@@ -9,6 +9,11 @@
 #import "RUAttributesDictionaryBuilder.h"
 #import "NSMutableDictionary+RUUtil.h"
 
+#if DEBUG
+#import "NSString+RUTextSizeStrings.h"
+#import <NSAttributedString+RUTextSize.h>
+#endif
+
 #import <CoreText/CoreText.h>
 
 #import <ResplendentUtilities/RUClassOrNilUtil.h>
@@ -19,6 +24,14 @@
 
 
 @implementation RUAttributesDictionaryBuilder
+
+#if DEBUG
+#pragma mark - Unit tests
++(void)load
+{
+	[self DEBUG__RUAttributesDictionaryBuilder_RUTextSize_kerning_unitTest];
+}
+#endif
 
 #pragma mark - Properties
 -(void)setProperty:(nullable id)propertyValue
@@ -173,12 +186,37 @@
 			break;
 
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
-			return NSParagraphStyleAttributeName;
+			return NSKernAttributeName;
 			break;
 	}
 	
 	NSAssert(false, @"unhandled attributeType %li",attributeType);
 	return nil;
 }
+
+#if DEBUG
+#pragma mark - Unit Testing
++(void)DEBUG__RUAttributesDictionaryBuilder_RUTextSize_kerning_unitTest
+{
+	NSString* const superLongText= [NSString ru_exampleString_longestTest];
+
+	CGFloat const boundedWidth = 100.0f;
+
+	RUAttributesDictionaryBuilder* const attributes = [RUAttributesDictionaryBuilder new];
+	[attributes setFont:[UIFont systemFontOfSize:24.0f]];
+	
+	NSAttributedString* const non_kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]];
+	
+	CGSize const non_kerned_size = [non_kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
+	
+	[attributes setKerning:@(10)];
+	
+	NSAttributedString* const kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]];	
+
+	CGSize kerned_size = [kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
+
+	NSAssert((CGSizeEqualToSize(non_kerned_size, kerned_size) == false), @"These should be different sizes");
+}
+#endif
 
 @end

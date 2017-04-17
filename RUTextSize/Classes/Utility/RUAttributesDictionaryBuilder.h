@@ -43,4 +43,9 @@
 #pragma mark - Attribute Type
 +(nonnull NSString*)attributeTypeKeyForEnum:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 
+#if DEBUG
+#pragma mark - Unit Testing
++(void)DEBUG__RUAttributesDictionaryBuilder_RUTextSize_kerning_unitTest;
+#endif
+
 @end
