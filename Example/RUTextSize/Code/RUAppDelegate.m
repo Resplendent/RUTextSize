@@ -11,6 +11,7 @@
 
 #if DEBUG
 #import "UILabel+RUTextSize.h"
+#import "RUAttributesDictionaryBuilder.h"
 #endif
 
 
@@ -23,6 +24,7 @@
 {
 #if DEBUG
 	[UILabel DEBUG__NSAttributedString_RUTextSize_unitTest];
+    [RUAttributesDictionaryBuilder DEBUG__RUAttributesDictionaryBuilder_RUTextSize_kerning_unitTest];
 #endif
 
 	UIWindow* window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
