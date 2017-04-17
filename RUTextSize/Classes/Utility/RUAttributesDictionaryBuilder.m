@@ -190,26 +190,26 @@
 #pragma mark - Unit Testing
 +(void)DEBUG__RUAttributesDictionaryBuilder_RUTextSize_kerning_unitTest
 {
-    NSString* const superLongText = [NSString ru_exampleString_longestTest];
-    
-    UILabel* const debugLabel = [UILabel new];
-    [debugLabel setFont:[UIFont systemFontOfSize:24.0f]];
-    [debugLabel setText:superLongText];
-    [debugLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    
-    CGFloat const boundedWidth = 100.0f;
-    
-    CGSize const non_kerned_size = [debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
+	NSString* const superLongText = [NSString ru_exampleString_longestTest];
 
-    RUAttributesDictionaryBuilder* const attributes = [RUAttributesDictionaryBuilder new];
-    [attributes absorbPropertiesFromLabel:debugLabel];
-    [attributes setKerning:@(10)];
-    
-    [debugLabel setAttributedText:[[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]]];
+	UILabel* const debugLabel = [UILabel new];
+	[debugLabel setFont:[UIFont systemFontOfSize:24.0f]];
+	[debugLabel setText:superLongText];
+	[debugLabel setLineBreakMode:NSLineBreakByWordWrapping];
 
-    CGSize kerned_size = [debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
-  
-    NSAssert((CGSizeEqualToSize(non_kerned_size, kerned_size) == false), @"These should be different sizes");
+	CGFloat const boundedWidth = 100.0f;
+
+	CGSize const non_kerned_size = [debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
+
+	RUAttributesDictionaryBuilder* const attributes = [RUAttributesDictionaryBuilder new];
+	[attributes absorbPropertiesFromLabel:debugLabel];
+	[attributes setKerning:@(10)];
+
+	[debugLabel setAttributedText:[[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]]];
+
+	CGSize kerned_size = [debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
+
+	NSAssert((CGSizeEqualToSize(non_kerned_size, kerned_size) == false), @"These should be different sizes");
 }
 #endif
 
