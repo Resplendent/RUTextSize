@@ -11,7 +11,7 @@
 
 #if DEBUG
 #import "NSString+RUTextSizeStrings.h"
-#import "UILabel+RUTextSize.h"
+#import <NSAttributedString+RUTextSize.h>
 #endif
 
 #import <CoreText/CoreText.h>
@@ -198,24 +198,22 @@
 #pragma mark - Unit Testing
 +(void)DEBUG__RUAttributesDictionaryBuilder_RUTextSize_kerning_unitTest
 {
-	NSString* const superLongText = [NSString ru_exampleString_longestTest];
-
-	UILabel* const debugLabel = [UILabel new];
-	[debugLabel setFont:[UIFont systemFontOfSize:24.0f]];
-	[debugLabel setText:superLongText];
-	[debugLabel setLineBreakMode:NSLineBreakByWordWrapping];
+	NSString* const superLongText= [NSString ru_exampleString_longestTest];
 
 	CGFloat const boundedWidth = 100.0f;
 
-	CGSize const non_kerned_size = [debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
-
 	RUAttributesDictionaryBuilder* const attributes = [RUAttributesDictionaryBuilder new];
-	[attributes absorbPropertiesFromLabel:debugLabel];
+	[attributes setFont:[UIFont systemFontOfSize:24.0f]];
+	
+	NSAttributedString* const non_kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]];
+	
+	CGSize const non_kerned_size = [non_kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
+	
 	[attributes setKerning:@(10)];
+	
+	NSAttributedString* const kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]];	
 
-	[debugLabel setAttributedText:[[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]]];
-
-	CGSize kerned_size = [debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
+	CGSize kerned_size = [kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
 
 	NSAssert((CGSizeEqualToSize(non_kerned_size, kerned_size) == false), @"These should be different sizes");
 }
