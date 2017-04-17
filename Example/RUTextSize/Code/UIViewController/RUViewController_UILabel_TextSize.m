@@ -237,18 +237,21 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	[label setFont:[UIFont systemFontOfSize:16.0f]];
 	[label setTextColor:[UIColor darkTextColor]];
     [label setLineBreakMode:[self cellCustomViewLabel_lineBreakMode_forSection:section]];
-
+    
+    NSString* const stringToUse = [self cellCustomViewLabel_textForSection:section];
+   
     if (section == RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning)
     {
         RUAttributesDictionaryBuilder* const attributesDictionary = [RUAttributesDictionaryBuilder new];
         [attributesDictionary absorbPropertiesFromLabel:label];
-        [attributesDictionary setKerning:@(5)];
-        [label setAttributedText:[[NSAttributedString alloc] initWithString:[self cellCustomViewLabel_textForSection:section] attributes:[attributesDictionary createAttributesDictionary]]];
+        [attributesDictionary setKerning:@(10)];
+        [label setAttributedText:[[NSAttributedString alloc] initWithString:stringToUse attributes:[attributesDictionary createAttributesDictionary]]];
     }
     else
     {
-        [label setText:[self cellCustomViewLabel_textForSection:section]];
+        [label setText:stringToUse];
     }
+    
 	[section_to_cellCustomViewLabel_mapping_cache setObject:label forKey:section_key];
 
 	return label;
