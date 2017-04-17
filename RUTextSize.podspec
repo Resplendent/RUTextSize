@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RUTextSize'
-  s.version          = "0.1.13"
+  s.version          = "0.1.14"
   s.summary          = "Provides code for determining the size of text."
 
   s.description      = <<-DESC
@@ -31,7 +31,8 @@ Also provides category methods for absorbing the properties set on an instance o
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors          = {
 							"Benjamin Maer" => "ben@resplendent.co",
-							"Lee Pollard" => "tjdet11@gmail.com"
+							"Lee Pollard" => "tjdet11@gmail.com",
+							"Richard Reitzfeld" => "richie.reitzfeld@gmail.com"
 }
   s.source           = { :git => "https://github.com/Resplendent/RUTextSize.git", :tag => "v#{s.version}"}
 
@@ -40,5 +41,5 @@ Also provides category methods for absorbing the properties set on an instance o
 
   s.source_files = 'RUTextSize/Classes/**/*'
   
-  s.dependency 'ResplendentUtilities', '~> 0.5.0'
+  s.dependency 'ResplendentUtilities', '~> 0.5.1'
 end
