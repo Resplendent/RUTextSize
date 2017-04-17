@@ -25,6 +25,14 @@
 
 @implementation RUAttributesDictionaryBuilder
 
+#if DEBUG
+#pragma mark - Unit tests
++(void)load
+{
+	[self DEBUG__RUAttributesDictionaryBuilder_RUTextSize_kerning_unitTest];
+}
+#endif
+
 #pragma mark - Properties
 -(void)setProperty:(nullable id)propertyValue
 	 attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
