@@ -26,7 +26,7 @@
 	{
 		RUAttributesDictionaryBuilder* attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
 		[attributesDictionaryBuilder absorbPropertiesFromButton:self];
-		return [currentTitle ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder createAttributesDictionary]];
+		return [currentTitle ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder attributesDictionary_generate]];
 	}
 	else
 	{

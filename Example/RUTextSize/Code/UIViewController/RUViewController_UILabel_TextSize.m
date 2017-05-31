@@ -245,7 +245,7 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 		RUAttributesDictionaryBuilder* const attributesDictionary = [RUAttributesDictionaryBuilder new];
 		[attributesDictionary absorbPropertiesFromLabel:label];
 		[attributesDictionary setKerning:@(10)];
-		[label setAttributedText:[[NSAttributedString alloc] initWithString:stringToUse attributes:[attributesDictionary createAttributesDictionary]]];
+		[label setAttributedText:[[NSAttributedString alloc] initWithString:stringToUse attributes:[attributesDictionary attributesDictionary_generate]]];
 	}
 	else
 	{

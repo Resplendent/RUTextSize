@@ -41,7 +41,7 @@
 			}
 
 			NSAttributedString* const attributedText = self.attributedText;
-			NSAttributedString* const attributedText_withAddedAttributesFromLabel = [attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder createAttributesDictionary]];
+			NSAttributedString* const attributedText_withAddedAttributesFromLabel = [attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder attributesDictionary_generate]];
 			NSAttributedString* const attributedString_toUse = (attributedText_withAddedAttributesFromLabel ?: attributedText);
 			NSAttributedString* const attributedString_final =
 			(attributedStringBlock ?
@@ -61,7 +61,7 @@
 				attributesDictionaryBuilderBlock(attributesDictionaryBuilder);
 			}
 
-			return [self.text ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder createAttributesDictionary]];
+			return [self.text ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder attributesDictionary_generate]];
 		}
 		else
 		{
@@ -87,7 +87,7 @@
 		}, ^NSAttributedString* _Nullable(NSAttributedString* _Nonnull attributedString){
 			
 			NSMutableAttributedString* const mutableAttributedString = [NSMutableAttributedString new];
-			NSString* const attributeName_paragraphStyle = [RUAttributesDictionaryBuilder attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_paragraphStyle];
+			NSString* const attributeName_paragraphStyle = [RUAttributesDictionaryBuilder attributeType_key_for_attributeType:RUAttributesDictionaryBuilder_attributeType_paragraphStyle];
 			
 			[attributedString enumerateAttributesInRange:NSMakeRange(0, attributedString.length)
 												 options:(0)

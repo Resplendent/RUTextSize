@@ -36,11 +36,12 @@
 -(void)absorbPropertiesAttributesDictionary:(nonnull NSDictionary*)attributesDictionary
 						   ignoreNilEntries:(BOOL)ignoreNilEntries;
 
-#pragma mark - Create
--(nullable NSDictionary*)createAttributesDictionary;
+#pragma mark - attributesDictionary
+-(nonnull NSDictionary<NSString*,id>*)attributesDictionary_generate;
+-(nullable id)attributesDictionary_value_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 
-#pragma mark - Attribute Type
-+(nonnull NSString*)attributeTypeKeyForEnum:(RUAttributesDictionaryBuilder_attributeType)attributeType;
+#pragma mark - attributeType
++(nullable NSString*)attributeType_key_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 
 #if DEBUG
 #pragma mark - Unit Testing

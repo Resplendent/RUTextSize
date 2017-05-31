@@ -32,7 +32,7 @@
 			 ([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
 	{
 		return [self.text ruTextSizeWithBoundingWidth:width
-										   attributes:[[self ru_attributesDictionaryBuilder] createAttributesDictionary]];
+										   attributes:[[self ru_attributesDictionaryBuilder] attributesDictionary_generate]];
 	}
 	else
 	{
