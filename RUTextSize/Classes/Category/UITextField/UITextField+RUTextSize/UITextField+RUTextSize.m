@@ -10,6 +10,9 @@
 #import "RUAttributesDictionaryBuilder.h"
 #import "NSString+RUTextSize.h"
 #import "NSAttributedString+RUTextSize.h"
+#import "UITextField+RUAttributesDictionaryBuilder.h"
+
+#import <ResplendentUtilities/RUConditionalReturn.h>
 
 
 
@@ -28,9 +31,8 @@
 	else if (([self.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) &&
 			 ([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
 	{
-		RUAttributesDictionaryBuilder* attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
-		[attributesDictionaryBuilder absorbPropertiesFromTextField:self];
-		return [self.text ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder createAttributesDictionary]];
+		return [self.text ruTextSizeWithBoundingWidth:width
+										   attributes:[[self ru_attributesDictionaryBuilder] createAttributesDictionary]];
 	}
 	else
 	{

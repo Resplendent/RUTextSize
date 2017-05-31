@@ -86,12 +86,6 @@
 	[self absorbPropertiesFromLabel:button.titleLabel];
 }
 
--(void)absorbPropertiesFromTextField:(UITextField*)textField
-{
-	[self setFont:textField.font];
-	[self setTextColor:textField.textColor];
-}
-
 -(void)absorbPropertiesFromTextView:(UITextView*)textView
 {
 	[self setFont:textView.font];
