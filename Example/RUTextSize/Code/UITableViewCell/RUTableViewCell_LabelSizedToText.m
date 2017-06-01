@@ -7,11 +7,12 @@
 //
 
 #import "RUTableViewCell_LabelSizedToText.h"
-#import "UILabel+RUTextSize.h"
 
 #import <ResplendentUtilities/RUConditionalReturn.h>
 #import <ResplendentUtilities/UIView+RUUtility.h>
 #import <ResplendentUtilities/RUConstants.h>
+
+#import <RUTextSize/UILabel+RUTextSize.h>
 
 
 

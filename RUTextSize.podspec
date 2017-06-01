@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RUTextSize'
-  s.version          = "0.1.14"
+  s.version          = "0.1.15"
   s.summary          = "Provides code for determining the size of text."
 
   s.description      = <<-DESC

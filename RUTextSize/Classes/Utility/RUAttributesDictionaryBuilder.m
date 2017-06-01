@@ -42,30 +42,30 @@
 		case RUAttributesDictionaryBuilder_attributeType_font:
 			[self setFont:kRUClassOrNil(propertyValue, UIFont)];
 			break;
-			
+
 		case RUAttributesDictionaryBuilder_attributeType_paragraphStyle:
 		{
-			NSParagraphStyle* paragraphStyle = kRUClassOrNil(propertyValue, NSParagraphStyle);
+			NSParagraphStyle* const paragraphStyle = kRUClassOrNil(propertyValue, NSParagraphStyle);
 			kRUConditionalReturn((propertyValue == nil) != (paragraphStyle != nil), YES);
 			[self setLineBreakMode:paragraphStyle.lineBreakMode];
 			[self setLineSpacing:@(paragraphStyle.lineSpacing)];
 			[self setTextAlignment:paragraphStyle.alignment];
 		}
 			break;
-			
+
 		case RUAttributesDictionaryBuilder_attributeType_textColor:
 			[self setTextColor:kRUClassOrNil(propertyValue, UIColor)];
 			break;
-			
+
 		case RUAttributesDictionaryBuilder_attributeType_textColor_textColorShouldUseCoreTextKey:
 		{
-			NSNumber* textColorShouldUseCoreTextKey = kRUNumberOrNil(propertyValue);
+			NSNumber* const textColorShouldUseCoreTextKey = kRUNumberOrNil(propertyValue);
 			kRUConditionalReturn((propertyValue == nil) != (textColorShouldUseCoreTextKey != nil), YES);
 
 			[self setTextColorShouldUseCoreTextKey:textColorShouldUseCoreTextKey.boolValue];
 		}
 			break;
-			
+
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
 			[self setKerning:kRUNumberOrNil(propertyValue)];
 			break;
@@ -73,32 +73,6 @@
 }
 
 #pragma mark - Absorb
--(void)absorbPropertiesFromLabel:(UILabel*)label
-{
-	[self setFont:label.font];
-	[self setTextColor:label.textColor];
-	[self setLineBreakMode:label.lineBreakMode];
-	[self setTextAlignment:label.textAlignment];
-}
-
--(void)absorbPropertiesFromButton:(UIButton*)button
-{
-	[self absorbPropertiesFromLabel:button.titleLabel];
-}
-
--(void)absorbPropertiesFromTextField:(UITextField*)textField
-{
-	[self setFont:textField.font];
-	[self setTextColor:textField.textColor];
-}
-
--(void)absorbPropertiesFromTextView:(UITextView*)textView
-{
-	[self setFont:textView.font];
-	[self setTextColor:textView.textColor];
-	[self setTextAlignment:textView.textAlignment];
-}
-
 -(void)absorbPropertiesAttributesDictionary:(nonnull NSDictionary*)attributesDictionary
 						   ignoreNilEntries:(BOOL)ignoreNilEntries
 {
@@ -106,15 +80,15 @@
 		 attributeType <= RUAttributesDictionaryBuilder_attributeType__last;
 		 attributeType++)
 	{
-		NSString* attributeKey = [[self class]attributeTypeKeyForEnum:attributeType];
-		BOOL attributeKey_use = (attributeKey != nil);
+		NSString* const attributeKey = [[self class] attributeType_key_for_attributeType:attributeType];
+		BOOL const attributeKey_use = (attributeKey != nil);
 		if (attributeKey_use == false)
 		{
 			NSAssert(attributeKey_use, @"unhandled");
 			continue;
 		}
 
-		id attributeValue = [attributesDictionary objectForKey:attributeKey];
+		id const attributeValue = [attributesDictionary objectForKey:attributeKey];
 
 		if ((ignoreNilEntries == NO) ||
 			(attributeValue != nil))
@@ -125,38 +99,79 @@
 	}
 }
 
-#pragma mark - Create Attributes Dictionary
--(NSDictionary*)createAttributesDictionary
+#pragma mark - attributesDictionary
+-(nonnull NSDictionary<NSString*,id>*)attributesDictionary_generate
 {
-	NSMutableDictionary* attributesDictionary = [NSMutableDictionary dictionary];
+	NSMutableDictionary<NSString*,id>* const attributesDictionary = [NSMutableDictionary<NSString*,id> dictionary];
 
-	[attributesDictionary setObjectOrRemoveIfNil:self.font forKey:[[self class] attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_font]];
-
-	[attributesDictionary setObjectOrRemoveIfNil:self.textColor forKey:[[self class] attributeTypeKeyForEnum:(self.textColorShouldUseCoreTextKey ?
-																											  RUAttributesDictionaryBuilder_attributeType_textColor_textColorShouldUseCoreTextKey :
-																											  RUAttributesDictionaryBuilder_attributeType_textColor)]];
-
-	NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-	[style setLineBreakMode:self.lineBreakMode];
-	[style setAlignment:self.textAlignment];
-
-	if (self.lineSpacing)
+	for (RUAttributesDictionaryBuilder_attributeType attributeType = RUAttributesDictionaryBuilder_attributeType__first;
+		 attributeType <= RUAttributesDictionaryBuilder_attributeType__last;
+		 attributeType++)
 	{
-		[style setLineSpacing:self.lineSpacing.floatValue];
+		[attributesDictionary setObjectOrRemoveIfNil:[self attributesDictionary_value_for_attributeType:attributeType]
+											  forKey:[[self class] attributeType_key_for_attributeType:attributeType]];
+		
 	}
 
-	if (self.kerning)
-	{
-		[attributesDictionary setObject:self.kerning forKey:[[self class]attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_kerning]];
-	}
-
-	[attributesDictionary setObjectOrRemoveIfNil:style forKey:[[self class]attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_paragraphStyle]];
-	
-	return [attributesDictionary copy];
+	return [NSDictionary<NSString*,id> dictionaryWithDictionary:attributesDictionary];
 }
 
-#pragma mark - Attribute Type
-+(nonnull NSString*)attributeTypeKeyForEnum:(RUAttributesDictionaryBuilder_attributeType)attributeType
+-(nullable id)attributesDictionary_value_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
+{
+	switch (attributeType)
+	{
+		case RUAttributesDictionaryBuilder_attributeType_font:
+			return self.font;
+			break;
+			
+		case RUAttributesDictionaryBuilder_attributeType_paragraphStyle:
+		{
+			NSMutableParagraphStyle* const style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+			[style setLineBreakMode:self.lineBreakMode];
+			[style setAlignment:self.textAlignment];
+			
+			if (self.lineSpacing)
+			{
+				[style setLineSpacing:self.lineSpacing.floatValue];
+			}
+
+			return style;
+		}
+			break;
+			
+		case RUAttributesDictionaryBuilder_attributeType_textColor:
+			return
+			(
+			 self.textColorShouldUseCoreTextKey
+			 ?
+			 nil
+			 :
+			 self.textColor
+			 );
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_textColor_textColorShouldUseCoreTextKey:
+			return
+			(
+			 self.textColorShouldUseCoreTextKey
+			 ?
+			 self.textColor
+			 :
+			 nil
+			 );
+			break;
+			
+		case RUAttributesDictionaryBuilder_attributeType_kerning:
+			return self.kerning;
+			break;
+	}
+	
+	NSAssert(false, @"unhandled attributeType %li",attributeType);
+	return nil;
+}
+
+#pragma mark - attributeType
++(nullable NSString*)attributeType_key_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
 {
 	switch (attributeType)
 	{
@@ -167,7 +182,7 @@
 		case RUAttributesDictionaryBuilder_attributeType_paragraphStyle:
 			return NSParagraphStyleAttributeName;
 			break;
-			
+
 		case RUAttributesDictionaryBuilder_attributeType_textColor:
 			return NSForegroundColorAttributeName;
 			break;
@@ -181,7 +196,7 @@
 					(NSString *)kCTForegroundColorAttributeName :
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunreachable-code"
-					[self attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_textColor]);
+					[self attributeType_key_for_attributeType:RUAttributesDictionaryBuilder_attributeType_textColor]);
 #pragma clang diagnostic pop
 			break;
 
@@ -189,7 +204,7 @@
 			return NSKernAttributeName;
 			break;
 	}
-	
+
 	NSAssert(false, @"unhandled attributeType %li",attributeType);
 	return nil;
 }
@@ -204,16 +219,16 @@
 
 	RUAttributesDictionaryBuilder* const attributes = [RUAttributesDictionaryBuilder new];
 	[attributes setFont:[UIFont systemFontOfSize:24.0f]];
-	
-	NSAttributedString* const non_kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]];
-	
-	CGSize const non_kerned_size = [non_kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
-	
-	[attributes setKerning:@(10)];
-	
-	NSAttributedString* const kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes createAttributesDictionary]];	
 
-	CGSize kerned_size = [kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
+	NSAttributedString* const non_kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes attributesDictionary_generate]];
+
+	CGSize const non_kerned_size = [non_kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
+
+	[attributes setKerning:@(10)];
+
+	NSAttributedString* const kerned_string = [[NSAttributedString alloc] initWithString:superLongText attributes:[attributes attributesDictionary_generate]];
+
+	CGSize const kerned_size = [kerned_string ru_textSizeWithBoundingWidth:boundedWidth];
 
 	NSAssert((CGSizeEqualToSize(non_kerned_size, kerned_size) == false), @"These should be different sizes");
 }

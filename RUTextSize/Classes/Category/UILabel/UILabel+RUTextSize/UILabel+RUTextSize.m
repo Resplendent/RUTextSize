@@ -10,6 +10,7 @@
 #import "RUAttributesDictionaryBuilder.h"
 #import "NSString+RUTextSize.h"
 #import "NSAttributedString+RUTextSize.h"
+#import "UILabel+RUAttributesDictionaryBuilder.h"
 
 #if DEBUG
 #import "NSString+RUTextSizeStrings.h"
@@ -33,7 +34,7 @@
 			(self.attributedText.length))
 		{
 			RUAttributesDictionaryBuilder* const attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
-			[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
+			[self ru_apply_to_attributesDictionaryBuilder:attributesDictionaryBuilder];
 
 			if (attributesDictionaryBuilderBlock)
 			{
@@ -41,7 +42,7 @@
 			}
 
 			NSAttributedString* const attributedText = self.attributedText;
-			NSAttributedString* const attributedText_withAddedAttributesFromLabel = [attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder createAttributesDictionary]];
+			NSAttributedString* const attributedText_withAddedAttributesFromLabel = [attributedText ru_attributedStringWithAttributesAppliedToBlankGaps:[attributesDictionaryBuilder attributesDictionary_generate]];
 			NSAttributedString* const attributedString_toUse = (attributedText_withAddedAttributesFromLabel ?: attributedText);
 			NSAttributedString* const attributedString_final =
 			(attributedStringBlock ?
@@ -54,14 +55,14 @@
 				 ([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
 		{
 			RUAttributesDictionaryBuilder* const attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
-			[attributesDictionaryBuilder absorbPropertiesFromLabel:self];
+			[self ru_apply_to_attributesDictionaryBuilder:attributesDictionaryBuilder];
 
 			if (attributesDictionaryBuilderBlock)
 			{
 				attributesDictionaryBuilderBlock(attributesDictionaryBuilder);
 			}
 
-			return [self.text ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder createAttributesDictionary]];
+			return [self.text ruTextSizeWithBoundingWidth:width attributes:[attributesDictionaryBuilder attributesDictionary_generate]];
 		}
 		else
 		{
@@ -81,14 +82,14 @@
 	{
 		NSLineBreakMode const lineBreakMode_replacement = NSLineBreakByCharWrapping;
 		return actions(^(RUAttributesDictionaryBuilder* _Nonnull attributesDictionaryBuilder){
-			
+
 			[attributesDictionaryBuilder setLineBreakMode:lineBreakMode_replacement];
-			
+
 		}, ^NSAttributedString* _Nullable(NSAttributedString* _Nonnull attributedString){
-			
+
 			NSMutableAttributedString* const mutableAttributedString = [NSMutableAttributedString new];
-			NSString* const attributeName_paragraphStyle = [RUAttributesDictionaryBuilder attributeTypeKeyForEnum:RUAttributesDictionaryBuilder_attributeType_paragraphStyle];
-			
+			NSString* const attributeName_paragraphStyle = [RUAttributesDictionaryBuilder attributeType_key_for_attributeType:RUAttributesDictionaryBuilder_attributeType_paragraphStyle];
+
 			[attributedString enumerateAttributesInRange:NSMakeRange(0, attributedString.length)
 												 options:(0)
 											  usingBlock:
@@ -124,13 +125,13 @@
 #pragma mark - Unit Testing
 +(void)DEBUG__NSAttributedString_RUTextSize_unitTest
 {
-	NSString* superLongText = [NSString ru_exampleString_longestTest];
-	
-	UILabel* debugLabel = [UILabel new];
+	NSString* const superLongText = [NSString ru_exampleString_longestTest];
+
+	UILabel* const debugLabel = [UILabel new];
 	[debugLabel setFont:[UIFont systemFontOfSize:24.0f]];
 	[debugLabel setText:superLongText];
 	[debugLabel setLineBreakMode:NSLineBreakByWordWrapping];
-	
+
 	CGFloat const boundedWidth = 100.0f;
 
 	[debugLabel ruTextSizeConstrainedToWidth:boundedWidth];
