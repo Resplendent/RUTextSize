@@ -8,12 +8,13 @@
 
 #import "RUViewController_RUTextViewWithPlaceholderContainerView.h"
 #import "RUGenericTableViewCell_CustomView.h"
-#import "RUTextViewWithPlaceholderContainerView.h"
 
 #import <ResplendentUtilities/NSString+RUMacros.h>
 #import <ResplendentUtilities/RUConditionalReturn.h>
 
 #import <RTSMTableSectionManager/RTSMTableSectionManager.h>
+
+#import <RUTextSize/RUTextViewWithPlaceholderContainerView.h>
 
 
 

@@ -14,6 +14,7 @@
 #import "NSAttributedString+RUTextSizeStrings.h"
 #import "NSString+RUTextSize.h"
 #import "NSString+RUTextSizeStrings.h"
+#import "UIButton+RUAttributesDictionaryBuilder.h"
 #import "UIButton+RUTextSize.h"
 #import "UILabel+RUAttributesDictionaryBuilder.h"
 #import "UILabel+RUTextSize.h"

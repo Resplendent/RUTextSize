@@ -31,8 +31,11 @@
 	else if (([self.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) &&
 			 ([self.text respondsToSelector:@selector(ruTextSizeWithBoundingWidth:attributes:)]))
 	{
+		RUAttributesDictionaryBuilder* const attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
+		[self ru_apply_to_attributesDictionaryBuilder:attributesDictionaryBuilder];
+
 		return [self.text ruTextSizeWithBoundingWidth:width
-										   attributes:[[self ru_attributesDictionaryBuilder] attributesDictionary_generate]];
+										   attributes:[attributesDictionaryBuilder attributesDictionary_generate]];
 	}
 	else
 	{

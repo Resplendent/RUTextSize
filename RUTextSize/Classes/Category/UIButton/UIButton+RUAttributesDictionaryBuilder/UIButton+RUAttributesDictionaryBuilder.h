@@ -1,5 +1,5 @@
 //
-//  UITextField+RUAttributesDictionaryBuilder.h
+//  UIButton+RUAttributesDictionaryBuilder.h
 //  Pods
 //
 //  Created by Benjamin Maer on 5/31/17.
@@ -18,7 +18,7 @@
 
 
 
-@interface UITextField (RUAttributesDictionaryBuilder)
+@interface UIButton (RUAttributesDictionaryBuilder)
 
 #pragma mark - absorb
 -(void)ru_absorb_attributesDictionaryBuilder:(nonnull RUAttributesDictionaryBuilder*)attributesDictionaryBuilder;

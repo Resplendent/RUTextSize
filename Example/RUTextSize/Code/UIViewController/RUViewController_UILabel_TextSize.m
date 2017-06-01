@@ -8,14 +8,16 @@
 
 #import "RUViewController_UILabel_TextSize.h"
 #import "RUTableViewCell_LabelSizedToText.h"
-#import "UILabel+RUTextSize.h"
 #import "NSNumber+RUExampleConstants.h"
-#import "NSString+RUTextSize.h"
-#import "NSString+RUTextSizeStrings.h"
-#import "RUAttributesDictionaryBuilder.h"
 
 #import <ResplendentUtilities/NSString+RUMacros.h>
 #import <ResplendentUtilities/RUConditionalReturn.h>
+
+#import <RUTextSize/UILabel+RUTextSize.h>
+#import <RUTextSize/UILabel+RUAttributesDictionaryBuilder.h>
+#import <RUTextSize/RUAttributesDictionaryBuilder.h>
+#import <RUTextSize/NSString+RUTextSize.h>
+#import <RUTextSize/NSString+RUTextSizeStrings.h>
 
 #import <RTSMTableSectionManager/RTSMTableSectionManager.h>
 
@@ -23,22 +25,22 @@
 
 
 
-typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section) {
-	RUViewController_UILabel_TextSize__tableView_section_oneLine,
-	RUViewController_UILabel_TextSize__tableView_section_oneLine_withReallyLongText,
-	RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_0MaxNumberOfLines,
-	RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_3MaxNumberOfLines,
-	RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText,
-	RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_cappedAt2Lines,
+typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableSection) {
+	RUViewController_UILabel_TextSize__tableSection_oneLine,
+	RUViewController_UILabel_TextSize__tableSection_oneLine_withReallyLongText,
+	RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_0MaxNumberOfLines,
+	RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_3MaxNumberOfLines,
+	RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText,
+	RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_cappedAt2Lines,
 
-	RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_truncatedTail,
-	RUViewController_UILabel_TextSize__tableView_section_manyLines_withScatteredText_truncatedTail,
+	RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_truncatedTail,
+	RUViewController_UILabel_TextSize__tableSection_manyLines_withScatteredText_truncatedTail,
 
-	RUViewController_UILabel_TextSize__tableView_section_sameString_withoutKerning,
-	RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning,
+	RUViewController_UILabel_TextSize__tableSection_sameString_withoutKerning,
+	RUViewController_UILabel_TextSize__tableSection_sameString_withKerning,
 
-	RUViewController_UILabel_TextSize__tableView_section__first		= RUViewController_UILabel_TextSize__tableView_section_oneLine,
-	RUViewController_UILabel_TextSize__tableView_section__last		= RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning,
+	RUViewController_UILabel_TextSize__tableSection__first		= RUViewController_UILabel_TextSize__tableSection_oneLine,
+	RUViewController_UILabel_TextSize__tableSection__last		= RUViewController_UILabel_TextSize__tableSection_sameString_withKerning,
 };
 
 
@@ -49,23 +51,23 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 
 #pragma mark - tableView
 @property (nonatomic, readonly, nullable) UITableView* tableView;
--(CGRect)tableViewFrame;
+-(CGRect)tableView_frame;
 
 #pragma mark - tableSectionManager
 @property (nonatomic, readonly, nullable) RTSMTableSectionManager* tableSectionManager;
 
 #pragma mark - Table View Cells
--(nonnull RUTableViewCell_LabelSizedToText*)cellForTableSection:(RUViewController_UILabel_TextSize__tableView_section)tableSection;
+-(nonnull RUTableViewCell_LabelSizedToText*)cell_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)tableSection;
 
 #pragma mark - section_to_cellCustomViewLabel_mapping_cache
 @property (nonatomic, readonly, nonnull) NSMutableDictionary<NSNumber*,UILabel*>* section_to_cellCustomViewLabel_mapping_cache;
 
 #pragma mark - cell custom view label
--(nonnull UILabel*)cellCustomViewLabelForSection:(RUViewController_UILabel_TextSize__tableView_section)section;
--(NSInteger)cellCustomViewLabel_numberOfLines_forSection:(RUViewController_UILabel_TextSize__tableView_section)section;
--(nullable UIColor*)cellCustomViewLabel_backgroundColorForSection:(RUViewController_UILabel_TextSize__tableView_section)section;
--(nullable NSString*)cellCustomViewLabel_textForSection:(RUViewController_UILabel_TextSize__tableView_section)section;
--(NSLineBreakMode)cellCustomViewLabel_lineBreakMode_forSection:(RUViewController_UILabel_TextSize__tableView_section)section;
+-(nonnull UILabel*)cellCustomViewLabel_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section;
+-(NSInteger)cellCustomViewLabel_numberOfLines_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section;
+-(nullable UIColor*)cellCustomViewLabel_backgroundColor_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section;
+-(nullable NSString*)cellCustomViewLabel_text_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section;
+-(NSLineBreakMode)cellCustomViewLabel_lineBreakMode_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section;
 
 #pragma mark - Paddings
 +(CGFloat)RUTableViewCell_LabelSizedToText_padding_top;
@@ -102,8 +104,8 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 	[self.view addSubview:self.tableView];
 
-	_tableSectionManager = [[RTSMTableSectionManager alloc]initWithFirstSection:RUViewController_UILabel_TextSize__tableView_section__first
-																	lastSection:RUViewController_UILabel_TextSize__tableView_section__last];
+	_tableSectionManager = [[RTSMTableSectionManager alloc]initWithFirstSection:RUViewController_UILabel_TextSize__tableSection__first
+																	lastSection:RUViewController_UILabel_TextSize__tableSection__last];
 	[self.tableSectionManager setSectionDelegate:self];
 }
 
@@ -111,11 +113,11 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 {
 	[super viewWillLayoutSubviews];
 
-	[self.tableView setFrame:self.tableViewFrame];
+	[self.tableView setFrame:self.tableView_frame];
 }
 
 #pragma mark - tableView
--(CGRect)tableViewFrame
+-(CGRect)tableView_frame
 {
 	return self.view.bounds;
 }
@@ -138,8 +140,8 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	RUViewController_UILabel_TextSize__tableView_section const tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
-	return [self cellForTableSection:tableSection];
+	RUViewController_UILabel_TextSize__tableSection const tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
+	return [self cell_for_tableSection:tableSection];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -147,13 +149,13 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	CGFloat const padding_vertical_top = [[self class]RUTableViewCell_LabelSizedToText_padding_top];
 	CGFloat const padding_vertical_bottom = [[self class]RUTableViewCell_LabelSizedToText_padding_bottom];
 
-	RUViewController_UILabel_TextSize__tableView_section const tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
-	UILabel* const labelForSection = [self cellCustomViewLabelForSection:tableSection];
+	RUViewController_UILabel_TextSize__tableSection const tableSection = [self.tableSectionManager sectionForIndexPathSection:indexPath.section];
+	UILabel* const labelForSection = [self cellCustomViewLabel_for_tableSection:tableSection];
 	kRUConditionalReturn_ReturnValue(labelForSection == nil, YES, 0);
 
-	CGRect const tableViewFrame = self.tableViewFrame;
+	CGRect const tableView_frame = self.tableView_frame;
 
-	CGFloat const constrainedWidth = CGRectGetWidth(tableViewFrame) - [[self class]RUTableViewCell_LabelSizedToText_padding_left] - [[self class]RUTableViewCell_LabelSizedToText_padding_right];
+	CGFloat const constrainedWidth = CGRectGetWidth(tableView_frame) - [[self class]RUTableViewCell_LabelSizedToText_padding_left] - [[self class]RUTableViewCell_LabelSizedToText_padding_right];
 	CGSize const textSize = [labelForSection ruTextSizeConstrainedToWidth:constrainedWidth];
 
 	return textSize.height + padding_vertical_top + padding_vertical_bottom;
@@ -181,7 +183,7 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 }
 
 #pragma mark - Table View Cells
--(nonnull RUTableViewCell_LabelSizedToText*)cellForTableSection:(RUViewController_UILabel_TextSize__tableView_section)tableSection
+-(nonnull RUTableViewCell_LabelSizedToText*)cell_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)tableSection
 {
 	kRUDefineNSStringConstant(RUViewController__tableDequeIdentifier_RUTableViewCell_LabelSizedToText);
 	RUTableViewCell_LabelSizedToText* tableViewCell_LabelSizedToText = [self.tableView dequeueReusableCellWithIdentifier:RUViewController__tableDequeIdentifier_RUTableViewCell_LabelSizedToText];
@@ -198,7 +200,7 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 
 	[tableViewCell_LabelSizedToText setLabelSizedToText_padding_left:[[self class]RUTableViewCell_LabelSizedToText_padding_left]];
 	[tableViewCell_LabelSizedToText setLabelSizedToText_padding_right:[[self class]RUTableViewCell_LabelSizedToText_padding_right]];
-	[tableViewCell_LabelSizedToText setLabelSizedToText:[self cellCustomViewLabelForSection:tableSection]];
+	[tableViewCell_LabelSizedToText setLabelSizedToText:[self cellCustomViewLabel_for_tableSection:tableSection]];
 
 	return tableViewCell_LabelSizedToText;
 }
@@ -222,7 +224,7 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 }
 
 #pragma mark - cell custom view label
--(nonnull UILabel*)cellCustomViewLabelForSection:(RUViewController_UILabel_TextSize__tableView_section)section
+-(nonnull UILabel*)cellCustomViewLabel_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section
 {
 
 	NSMutableDictionary<NSNumber*,UILabel*>* const section_to_cellCustomViewLabel_mapping_cache = self.section_to_cellCustomViewLabel_mapping_cache;
@@ -232,18 +234,18 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	kRUConditionalReturn_ReturnValue(label != nil, NO, label);
 
 	label = [UILabel new];
-	[label setBackgroundColor:[self cellCustomViewLabel_backgroundColorForSection:section]];
-	[label setNumberOfLines:[self cellCustomViewLabel_numberOfLines_forSection:section]];
+	[label setBackgroundColor:[self cellCustomViewLabel_backgroundColor_for_tableSection:section]];
+	[label setNumberOfLines:[self cellCustomViewLabel_numberOfLines_for_tableSection:section]];
 	[label setFont:[UIFont systemFontOfSize:16.0f]];
 	[label setTextColor:[UIColor darkTextColor]];
-	[label setLineBreakMode:[self cellCustomViewLabel_lineBreakMode_forSection:section]];
+	[label setLineBreakMode:[self cellCustomViewLabel_lineBreakMode_for_tableSection:section]];
 
-	NSString* const stringToUse = [self cellCustomViewLabel_textForSection:section];
+	NSString* const stringToUse = [self cellCustomViewLabel_text_for_tableSection:section];
 
-	if (section == RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning)
+	if (section == RUViewController_UILabel_TextSize__tableSection_sameString_withKerning)
 	{
 		RUAttributesDictionaryBuilder* const attributesDictionary = [RUAttributesDictionaryBuilder new];
-		[attributesDictionary absorbPropertiesFromLabel:label];
+		[label ru_apply_to_attributesDictionaryBuilder:attributesDictionary];
 		[attributesDictionary setKerning:@(10)];
 		[label setAttributedText:[[NSAttributedString alloc] initWithString:stringToUse attributes:[attributesDictionary attributesDictionary_generate]]];
 	}
@@ -257,38 +259,38 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	return label;
 }
 
--(NSInteger)cellCustomViewLabel_numberOfLines_forSection:(RUViewController_UILabel_TextSize__tableView_section)section
+-(NSInteger)cellCustomViewLabel_numberOfLines_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section
 {
 	switch (section)
 	{
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine:
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine_withReallyLongText:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine_withReallyLongText:
 			return 1;
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_0MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_0MaxNumberOfLines:
 			return 0;
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_3MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_3MaxNumberOfLines:
 			return 3;
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText:
 			return 0;
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_cappedAt2Lines:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_cappedAt2Lines:
 			return 2;
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_truncatedTail:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withScatteredText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withScatteredText_truncatedTail:
 			return 0;
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning:
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withoutKerning:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withKerning:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withoutKerning:
 			return 0;
 			break;
 	}
@@ -297,23 +299,23 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	return 0;
 }
 
--(nullable UIColor*)cellCustomViewLabel_backgroundColorForSection:(RUViewController_UILabel_TextSize__tableView_section)section
+-(nullable UIColor*)cellCustomViewLabel_backgroundColor_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section
 {
 	switch (section)
 	{
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine:
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_0MaxNumberOfLines:
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_3MaxNumberOfLines:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_truncatedTail:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withScatteredText_truncatedTail:
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_0MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_3MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withScatteredText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withKerning:
 			return [UIColor greenColor];
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withoutKerning:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_cappedAt2Lines:
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine_withReallyLongText:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withoutKerning:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_cappedAt2Lines:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine_withReallyLongText:
 			return [UIColor redColor];
 			break;
 	}
@@ -322,44 +324,44 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	return 0;
 }
 
--(nullable NSString*)cellCustomViewLabel_textForSection:(RUViewController_UILabel_TextSize__tableView_section)section
+-(nullable NSString*)cellCustomViewLabel_text_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section
 {
 	switch (section)
 	{
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine:
 			return @"One line";
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine_withReallyLongText:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine_withReallyLongText:
 			return @"One line, capped at 1 line, with text that is sooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo long, you can't possible see the end of this.";
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_0MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_0MaxNumberOfLines:
 			return @"Three lines of text\nwith newlines\n0 max number of lines";
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_3MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_3MaxNumberOfLines:
 			return @"Three lines of text\nwith newlines\n3 max number of lines";
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText:
 			return [NSString ru_exampleString_longestTest];
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_cappedAt2Lines:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_cappedAt2Lines:
 			return @"This text is capped at 2 lines, but has to be sooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo long, it takes up many lines if it weren't capped. Hopefully this is long enough, but honestly, you never know.";
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_truncatedTail:
 			return @"This text should have a truncated tail, but has to be sooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo long, it takes up many lines if it weren't capped. Hopefully this is long enough, but honestly, you never know.";
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withScatteredText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withScatteredText_truncatedTail:
 			return @"Hey\n\n\n\n\n\n\n\nHardship\n\n\nJutfd";
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning:
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withoutKerning:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withKerning:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withoutKerning:
 			return @"This string is going to look mighty different once kerning is applied... They might even be different sizes! How exciting!";
 	}
 
@@ -367,23 +369,23 @@ typedef NS_ENUM(NSInteger, RUViewController_UILabel_TextSize__tableView_section)
 	return 0;
 }
 
--(NSLineBreakMode)cellCustomViewLabel_lineBreakMode_forSection:(RUViewController_UILabel_TextSize__tableView_section)section
+-(NSLineBreakMode)cellCustomViewLabel_lineBreakMode_for_tableSection:(RUViewController_UILabel_TextSize__tableSection)section
 {
 	switch (section)
 	{
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine:
-		case RUViewController_UILabel_TextSize__tableView_section_oneLine_withReallyLongText:
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_0MaxNumberOfLines:
-		case RUViewController_UILabel_TextSize__tableView_section_threeLinesOfText_withNewlines_3MaxNumberOfLines:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_cappedAt2Lines:
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withKerning:
-		case RUViewController_UILabel_TextSize__tableView_section_sameString_withoutKerning:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine:
+		case RUViewController_UILabel_TextSize__tableSection_oneLine_withReallyLongText:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_0MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_threeLinesOfText_withNewlines_3MaxNumberOfLines:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_cappedAt2Lines:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withKerning:
+		case RUViewController_UILabel_TextSize__tableSection_sameString_withoutKerning:
 			return NSLineBreakByWordWrapping;
 			break;
 
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withLongText_truncatedTail:
-		case RUViewController_UILabel_TextSize__tableView_section_manyLines_withScatteredText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withLongText_truncatedTail:
+		case RUViewController_UILabel_TextSize__tableSection_manyLines_withScatteredText_truncatedTail:
 			return NSLineBreakByTruncatingTail;
 			break;
 	}

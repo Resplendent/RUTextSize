@@ -30,8 +30,6 @@
 	 attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 
 #pragma mark - Absorb
--(void)absorbPropertiesFromLabel:(nonnull UILabel*)label;
--(void)absorbPropertiesFromButton:(nonnull UIButton*)button;
 -(void)absorbPropertiesFromTextView:(nonnull UITextView*)textView;
 -(void)absorbPropertiesAttributesDictionary:(nonnull NSDictionary*)attributesDictionary
 						   ignoreNilEntries:(BOOL)ignoreNilEntries;

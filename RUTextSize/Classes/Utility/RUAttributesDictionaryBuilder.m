@@ -73,19 +73,6 @@
 }
 
 #pragma mark - Absorb
--(void)absorbPropertiesFromLabel:(UILabel*)label
-{
-	[self setFont:label.font];
-	[self setTextColor:label.textColor];
-	[self setLineBreakMode:label.lineBreakMode];
-	[self setTextAlignment:label.textAlignment];
-}
-
--(void)absorbPropertiesFromButton:(UIButton*)button
-{
-	[self absorbPropertiesFromLabel:button.titleLabel];
-}
-
 -(void)absorbPropertiesFromTextView:(UITextView*)textView
 {
 	[self setFont:textView.font];

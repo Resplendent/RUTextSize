@@ -10,8 +10,8 @@
 #import "RUNavigationController.h"
 
 #if DEBUG
-#import "UILabel+RUTextSize.h"
-#import "RUAttributesDictionaryBuilder.h"
+#import <RUTextSize/UILabel+RUTextSize.h>
+#import <RUTextSize/RUAttributesDictionaryBuilder.h>
 #endif
 
 
