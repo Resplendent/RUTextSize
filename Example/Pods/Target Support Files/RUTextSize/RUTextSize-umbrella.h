@@ -20,6 +20,7 @@
 #import "UILabel+RUTextSize.h"
 #import "UITextField+RUAttributesDictionaryBuilder.h"
 #import "UITextField+RUTextSize.h"
+#import "UITextView+RUAttributesDictionaryBuilder.h"
 #import "UITextView+RUTextSize.h"
 #import "RUTextViewWithPlaceholderContainerView.h"
 #import "RUTextViewWithPlaceholderContainerViewProtocols.h"

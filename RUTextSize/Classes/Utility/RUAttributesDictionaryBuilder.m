@@ -73,13 +73,6 @@
 }
 
 #pragma mark - Absorb
--(void)absorbPropertiesFromTextView:(UITextView*)textView
-{
-	[self setFont:textView.font];
-	[self setTextColor:textView.textColor];
-	[self setTextAlignment:textView.textAlignment];
-}
-
 -(void)absorbPropertiesAttributesDictionary:(nonnull NSDictionary*)attributesDictionary
 						   ignoreNilEntries:(BOOL)ignoreNilEntries
 {
