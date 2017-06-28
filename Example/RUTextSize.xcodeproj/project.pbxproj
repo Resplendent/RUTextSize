@@ -27,6 +27,7 @@
 		D74AA1171DAC64DA00AD4784 /* RUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA10D1DAC64DA00AD4784 /* RUViewController.m */; };
 		D74AA1181DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA10F1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */; };
 		D74AA1191DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D74AA1111DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m */; };
+		D7E918771F045AA200063BDB /* RUViewController_Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E918761F045AA200063BDB /* RUViewController_Styling.m */; };
 		F2C7175A1843480AE49C24B5 /* Pods_RUTextSize_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B2313BFEE28BDABE7A5BA3 /* Pods_RUTextSize_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		D74AA10F1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_RUTextViewWithPlaceholderContainerView.m; sourceTree = "<group>"; };
 		D74AA1101DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_UILabel_TextSize.h; sourceTree = "<group>"; };
 		D74AA1111DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_UILabel_TextSize.m; sourceTree = "<group>"; };
+		D7E918751F045AA200063BDB /* RUViewController_Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUViewController_Styling.h; sourceTree = "<group>"; };
+		D7E918761F045AA200063BDB /* RUViewController_Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUViewController_Styling.m; sourceTree = "<group>"; };
 		DD04A70028BA6B202AEB257A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FFBAFB66FDFEEA24B10F406A /* Pods-RUTextSize_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RUTextSize_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RUTextSize_Tests/Pods-RUTextSize_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,14 +253,24 @@
 		D74AA10B1DAC64DA00AD4784 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D74AA10C1DAC64DA00AD4784 /* RUViewController.h */,
-				D74AA10D1DAC64DA00AD4784 /* RUViewController.m */,
 				D74AA10E1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.h */,
 				D74AA10F1DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m */,
+				D7E918741F045A9600063BDB /* RUViewController_Styling */,
 				D74AA1101DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.h */,
 				D74AA1111DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m */,
+				D74AA10C1DAC64DA00AD4784 /* RUViewController.h */,
+				D74AA10D1DAC64DA00AD4784 /* RUViewController.m */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		D7E918741F045A9600063BDB /* RUViewController_Styling */ = {
+			isa = PBXGroup;
+			children = (
+				D7E918751F045AA200063BDB /* RUViewController_Styling.h */,
+				D7E918761F045AA200063BDB /* RUViewController_Styling.m */,
+			);
+			path = RUViewController_Styling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +476,7 @@
 				D74AA1171DAC64DA00AD4784 /* RUViewController.m in Sources */,
 				D74AA1121DAC64DA00AD4784 /* NSNumber+RUExampleConstants.m in Sources */,
 				D74AA1141DAC64DA00AD4784 /* RUNavigationController.m in Sources */,
+				D7E918771F045AA200063BDB /* RUViewController_Styling.m in Sources */,
 				D74AA1161DAC64DA00AD4784 /* RUTableViewCell_LabelSizedToText.m in Sources */,
 				D74AA1191DAC64DA00AD4784 /* RUViewController_UILabel_TextSize.m in Sources */,
 				D74AA1181DAC64DA00AD4784 /* RUViewController_RUTextViewWithPlaceholderContainerView.m in Sources */,

@@ -26,6 +26,8 @@
 @property (nonatomic, assign) NSTextAlignment textAlignment;
 @property (nonatomic, strong, nullable) NSNumber* kerning;
 
+@property (nonatomic, assign) NSUnderlineStyle underlineStyle;
+
 -(void)setProperty:(nullable id)propertyValue
 	 attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 

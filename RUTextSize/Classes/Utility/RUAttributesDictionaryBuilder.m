@@ -37,6 +37,8 @@
 -(void)setProperty:(nullable id)propertyValue
 	 attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
 {
+	kRUConditionalReturn(RUAttributesDictionaryBuilder_attributeType__isInRange(attributeType) == false, YES);
+
 	switch (attributeType)
 	{
 		case RUAttributesDictionaryBuilder_attributeType_font:
@@ -68,6 +70,15 @@
 
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
 			[self setKerning:kRUNumberOrNil(propertyValue)];
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_underline:
+		{
+			NSNumber* const underlineStyle_number = kRUNumberOrNil(propertyValue);
+			NSAssert((propertyValue == nil) == (underlineStyle_number == nil), @"unhandled");
+
+			[self setUnderlineStyle:(underlineStyle_number ? underlineStyle_number.integerValue : 0)];
+		}
 			break;
 	}
 }
@@ -164,8 +175,15 @@
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
 			return self.kerning;
 			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_underline:
+		{
+			NSUnderlineStyle const underlineStyle = self.underlineStyle;
+			return (underlineStyle == 0 ? nil : @(underlineStyle));
+		}
+			break;
 	}
-	
+
 	NSAssert(false, @"unhandled attributeType %li",attributeType);
 	return nil;
 }
@@ -202,6 +220,10 @@
 
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
 			return NSKernAttributeName;
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_underline:
+			return NSUnderlineStyleAttributeName;
 			break;
 	}
 
