@@ -1,9 +1,9 @@
 PODS:
-  - ResplendentUtilities (0.5.1)
+  - ResplendentUtilities (0.5.2)
   - RTSMTableSectionManager (0.1.8):
     - ResplendentUtilities (~> 0.5.0)
   - RUTextSize (0.1.15):
-    - ResplendentUtilities (~> 0.5.1)
+    - ResplendentUtilities (~> 0.5.2)
 
 DEPENDENCIES:
   - RTSMTableSectionManager (= 0.1.8)
@@ -14,10 +14,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ResplendentUtilities: 352a570e505cde761102eb7a016d9d05ce7445e5
+  ResplendentUtilities: 76f87cca03bda3e246c31bba7bd74fe34ceb16ea
   RTSMTableSectionManager: 0da0f9e521a00501edabcd72be8b045c9d920111
-  RUTextSize: 5513b81c9a1778380d3231d689b46e6394414b96
+  RUTextSize: 9946e1a6b8a838b6cd26ad220abbac5cd22dfa7b
 
 PODFILE CHECKSUM: 37d383b8b4ff67632867d1244fe2702a8ead3cf2
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.2.1

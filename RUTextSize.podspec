@@ -41,5 +41,5 @@ Also provides category methods for absorbing the properties set on an instance o
 
   s.source_files = 'RUTextSize/Classes/**/*'
   
-  s.dependency 'ResplendentUtilities', '~> 0.5.1'
+  s.dependency 'ResplendentUtilities', '~> 0.5.2'
 end

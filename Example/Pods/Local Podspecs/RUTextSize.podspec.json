@@ -24,7 +24,7 @@
   "source_files": "RUTextSize/Classes/**/*",
   "dependencies": {
     "ResplendentUtilities": [
-      "~> 0.5.1"
+      "~> 0.5.2"
     ]
   }
 }
