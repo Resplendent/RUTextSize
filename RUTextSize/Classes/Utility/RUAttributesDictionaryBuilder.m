@@ -8,6 +8,9 @@
 
 #import "RUAttributesDictionaryBuilder.h"
 #import "NSMutableDictionary+RUUtil.h"
+#import "RUClassOrNilUtil.h"
+#import "RUConditionalReturn.h"
+#import "RUSystemVersionUtils.h"
 
 #if DEBUG
 #import "NSString+RUTextSizeStrings.h"
@@ -15,9 +18,6 @@
 #endif
 
 #import <CoreText/CoreText.h>
-
-#import <ResplendentUtilities/RUClassOrNilUtil.h>
-#import <ResplendentUtilities/RUConditionalReturn.h>
 
 
 
@@ -37,6 +37,8 @@
 -(void)setProperty:(nullable id)propertyValue
 	 attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
 {
+	kRUConditionalReturn(RUAttributesDictionaryBuilder_attributeType__isInRange(attributeType) == false, YES);
+
 	switch (attributeType)
 	{
 		case RUAttributesDictionaryBuilder_attributeType_font:
@@ -68,6 +70,24 @@
 
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
 			[self setKerning:kRUNumberOrNil(propertyValue)];
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_underline:
+		{
+			NSNumber* const underlineStyle_number = kRUNumberOrNil(propertyValue);
+			NSAssert((propertyValue == nil) == (underlineStyle_number == nil), @"unhandled");
+
+			[self setUnderlineStyle:(underlineStyle_number ? underlineStyle_number.integerValue : 0)];
+		}
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_strikethrough:
+		{
+			NSNumber* const strikethroughStyle_number = kRUNumberOrNil(propertyValue);
+			NSAssert((propertyValue == nil) == (strikethroughStyle_number == nil), @"unhandled");
+
+			[self setStrikethroughStyle:(strikethroughStyle_number ? strikethroughStyle_number.integerValue : 0)];
+		}
 			break;
 	}
 }
@@ -110,7 +130,12 @@
 	{
 		[attributesDictionary setObjectOrRemoveIfNil:[self attributesDictionary_value_for_attributeType:attributeType]
 											  forKey:[[self class] attributeType_key_for_attributeType:attributeType]];
-		
+
+		NSDictionary<NSString*,id>* const extraValues = [self attributesDictionary_extraValues_for_attributeType:attributeType];
+		if (extraValues)
+		{
+			[attributesDictionary addEntriesFromDictionary:extraValues];
+		}
 	}
 
 	return [NSDictionary<NSString*,id> dictionaryWithDictionary:attributesDictionary];
@@ -164,9 +189,56 @@
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
 			return self.kerning;
 			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_underline:
+		{
+			NSUnderlineStyle const underlineStyle = self.underlineStyle;
+			return (underlineStyle == 0 ? nil : @(underlineStyle));
+		}
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_strikethrough:
+			return @(self.strikethroughStyle);
+			break;
 	}
-	
+
 	NSAssert(false, @"unhandled attributeType %li",attributeType);
+	return nil;
+}
+
+-(nullable NSDictionary<NSString*,id>*)attributesDictionary_extraValues_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
+{
+	switch (attributeType)
+	{
+		case RUAttributesDictionaryBuilder_attributeType_strikethrough:
+		{
+			/*
+			 There seems to be a bug on iOS 10.3.x where strikethrough doesn't work in a few scenarios:
+			 1) Text has more than one line.
+			 2) Strikethrough applies to only some of the text in a string.
+			 
+			 Open Radar ticket:
+			 http://www.openradar.me/31174934
+			 
+			 Discussed:
+			 https://stackoverflow.com/questions/43112345/ios-10-3-nsstrikethroughstyleattributename-is-not-rendered
+			 */
+			if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.3")
+				&&
+				SYSTEM_VERSION_LESS_THAN(@"10.4"))
+			{
+				return
+				@{
+				  NSBaselineOffsetAttributeName		: @(0),
+				  };
+			}
+		}
+			break;
+
+		default:
+			break;
+	}
+
 	return nil;
 }
 
@@ -202,6 +274,14 @@
 
 		case RUAttributesDictionaryBuilder_attributeType_kerning:
 			return NSKernAttributeName;
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_underline:
+			return NSUnderlineStyleAttributeName;
+			break;
+
+		case RUAttributesDictionaryBuilder_attributeType_strikethrough:
+			return NSStrikethroughStyleAttributeName;
 			break;
 	}
 

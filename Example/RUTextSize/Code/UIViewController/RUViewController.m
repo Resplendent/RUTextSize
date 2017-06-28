@@ -10,6 +10,7 @@
 #import "RUTextViewWithPlaceholderContainerView.h"
 #import "RUViewController_RUTextViewWithPlaceholderContainerView.h"
 #import "RUViewController_UILabel_TextSize.h"
+#import "RUViewController_Styling.h"
 
 #import <ResplendentUtilities/NSString+RUMacros.h>
 #import <ResplendentUtilities/RUConditionalReturn.h>
@@ -23,9 +24,10 @@
 typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 	RUViewController__tableView_section_UILabel_textSize,
 	RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
+	RUViewController__tableView_section_styling,
 
 	RUViewController__tableView_section__first		= RUViewController__tableView_section_UILabel_textSize,
-	RUViewController__tableView_section__last		= RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView,
+	RUViewController__tableView_section__last		= RUViewController__tableView_section_styling,
 };
 
 
@@ -125,6 +127,7 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 	{
 		case RUViewController__tableView_section_UILabel_textSize:
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
+		case RUViewController__tableView_section_styling:
 			return 30.0f;
 			break;
 	}
@@ -145,6 +148,10 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
 			[self.navigationController pushViewController:[RUViewController_RUTextViewWithPlaceholderContainerView new] animated:YES];
 			break;
+
+		case RUViewController__tableView_section_styling:
+			[self.navigationController pushViewController:[RUViewController_Styling new] animated:YES];
+			break;
 	}
 }
 
@@ -159,6 +166,10 @@ typedef NS_ENUM(NSInteger, RUViewController__tableView_section) {
 
 		case RUViewController__tableView_section_RUTextViewWithPlaceholderContainerView:
 			return @"RUGenericTableViewCell_CustomView";
+			break;
+
+		case RUViewController__tableView_section_styling:
+			return NSStringFromClass([RUViewController_Styling class]);
 			break;
 	}
 	
