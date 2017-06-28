@@ -128,10 +128,12 @@
 		 attributeType <= RUAttributesDictionaryBuilder_attributeType__last;
 		 attributeType++)
 	{
-		[attributesDictionary setObjectOrRemoveIfNil:[self attributesDictionary_value_for_attributeType:attributeType]
+		id const value = [self attributesDictionary_value_for_attributeType:attributeType];
+		[attributesDictionary setObjectOrRemoveIfNil:value
 											  forKey:[[self class] attributeType_key_for_attributeType:attributeType]];
 
-		NSDictionary<NSString*,id>* const extraValues = [self attributesDictionary_extraValues_for_attributeType:attributeType];
+		NSDictionary<NSString*,id>* const extraValues = [self attributesDictionary_extraValues_for_value:value
+																						   attributeType:attributeType];
 		if (extraValues)
 		{
 			[attributesDictionary addEntriesFromDictionary:extraValues];
@@ -198,7 +200,10 @@
 			break;
 
 		case RUAttributesDictionaryBuilder_attributeType_strikethrough:
-			return @(self.strikethroughStyle);
+		{
+			NSUnderlineStyle const strikethroughStyle = self.strikethroughStyle;
+			return (strikethroughStyle == 0 ? nil : @(strikethroughStyle));
+		}
 			break;
 	}
 
@@ -206,7 +211,8 @@
 	return nil;
 }
 
--(nullable NSDictionary<NSString*,id>*)attributesDictionary_extraValues_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
+-(nullable NSDictionary<NSString*,id>*)attributesDictionary_extraValues_for_value:(nullable id)value
+																	attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType
 {
 	switch (attributeType)
 	{
@@ -227,6 +233,8 @@
 				&&
 				SYSTEM_VERSION_LESS_THAN(@"10.4"))
 			{
+				kRUConditionalReturn_ReturnValueNil(value == nil, NO);
+
 				return
 				@{
 				  NSBaselineOffsetAttributeName		: @(0),
