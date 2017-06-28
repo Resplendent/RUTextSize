@@ -2,7 +2,7 @@ PODS:
   - ResplendentUtilities (0.5.2)
   - RTSMTableSectionManager (0.1.8):
     - ResplendentUtilities (~> 0.5.0)
-  - RUTextSize (0.1.16):
+  - RUTextSize (0.1.17):
     - ResplendentUtilities (~> 0.5.2)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ResplendentUtilities: 76f87cca03bda3e246c31bba7bd74fe34ceb16ea
   RTSMTableSectionManager: 0da0f9e521a00501edabcd72be8b045c9d920111
-  RUTextSize: 0c4f30fe1f2beb8e61768df483b8a32e0e18815a
+  RUTextSize: 1a9e27d32b2cb4e5c9f10397076f4c65859ac285
 
 PODFILE CHECKSUM: 37d383b8b4ff67632867d1244fe2702a8ead3cf2
 
