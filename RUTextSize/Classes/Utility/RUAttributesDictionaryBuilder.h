@@ -39,7 +39,8 @@
 #pragma mark - attributesDictionary
 -(nonnull NSDictionary<NSString*,id>*)attributesDictionary_generate;
 -(nullable id)attributesDictionary_value_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
--(nullable NSDictionary<NSString*,id>*)attributesDictionary_extraValues_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
+-(nullable NSDictionary<NSString*,id>*)attributesDictionary_extraValues_for_value:(nullable id)value
+																	attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
 
 #pragma mark - attributeType
 +(nullable NSString*)attributeType_key_for_attributeType:(RUAttributesDictionaryBuilder_attributeType)attributeType;
