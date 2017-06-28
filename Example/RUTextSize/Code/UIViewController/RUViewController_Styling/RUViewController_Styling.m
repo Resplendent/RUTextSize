@@ -24,9 +24,10 @@
 
 typedef NS_ENUM(NSInteger, RUViewController_Styling__tableSection) {
 	RUViewController_Styling__tableSection_underline,
+	RUViewController_Styling__tableSection_strikethrough,
 	
 	RUViewController_Styling__tableSection__first	= RUViewController_Styling__tableSection_underline,
-	RUViewController_Styling__tableSection__last	= RUViewController_Styling__tableSection_underline,
+	RUViewController_Styling__tableSection__last	= RUViewController_Styling__tableSection_strikethrough,
 };
 
 
@@ -220,6 +221,8 @@ typedef NS_ENUM(NSInteger, RUViewController_Styling__tableSection) {
 	[label setFont:[UIFont systemFontOfSize:16.0f]];
 	[label setTextColor:[UIColor darkTextColor]];
 	[label setAttributedText:[self cellCustomViewLabel_attributedText_for_tableSection:section]];
+	[label setNumberOfLines:2];
+	[label setTextAlignment:NSTextAlignmentCenter];
 	
 	[section_to_cellCustomViewLabel_mapping_cache setObject:label forKey:section_key];
 	
@@ -235,11 +238,24 @@ typedef NS_ENUM(NSInteger, RUViewController_Styling__tableSection) {
 			NSMutableAttributedString* const mutableAttributedString = [NSMutableAttributedString new];
 			
 			RUAttributesDictionaryBuilder* const attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
-			[attributesDictionaryBuilder setFont:[UIFont systemFontOfSize:16.0f]];
 			[mutableAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"the last word will have " attributes:[attributesDictionaryBuilder attributesDictionary_generate]]];
 
 			[attributesDictionaryBuilder setUnderlineStyle:NSUnderlineStyleSingle | NSUnderlinePatternSolid];
 			[mutableAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"underline" attributes:[attributesDictionaryBuilder attributesDictionary_generate]]];
+
+			return [[NSAttributedString alloc] initWithAttributedString:mutableAttributedString];
+		}
+			break;
+
+		case RUViewController_Styling__tableSection_strikethrough:
+		{
+			NSMutableAttributedString* const mutableAttributedString = [NSMutableAttributedString new];
+
+			RUAttributesDictionaryBuilder* const attributesDictionaryBuilder = [RUAttributesDictionaryBuilder new];
+			[mutableAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"the last word will have " attributes:[attributesDictionaryBuilder attributesDictionary_generate]]];
+			
+			[attributesDictionaryBuilder setStrikethroughStyle:NSUnderlineStyleSingle | NSUnderlinePatternSolid];
+			[mutableAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"strikethrough" attributes:[attributesDictionaryBuilder attributesDictionary_generate]]];
 
 			return [[NSAttributedString alloc] initWithAttributedString:mutableAttributedString];
 		}
